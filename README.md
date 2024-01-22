@@ -195,6 +195,8 @@ for name, model in model_dict.items():
 models.head()
 ```
 
+![Evaluation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/38efe068cfb92cdf9ac63cabc5dfed135e58e8a2/Gambar/6.png)
+
 
 
 
