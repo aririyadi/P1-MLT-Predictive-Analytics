@@ -168,7 +168,30 @@ knn.fit(X_train, y_train)
 ## Evaluation
 Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah Mean Squared Error (MSE). MSE digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. MSE mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
 
+### Mean Squared Error (MSE):
 $$MSE = \frac{1}{N} \Sigma_{i=1}^N({y_i}- y\_pred_i)^2$$
+
+### Hasil Proyek Berdasarkan Metrik Evaluasi:
+-	Model dievaluasi menggunakan MSE pada data pengujian.
+-	Semakin kecil nilai MSE, semakin baik kinerja model dalam menghasilkan prediksi yang akurat.
+-	Model dengan MSE terendah dianggap sebagai solusi terbaik untuk menyelesaikan permasalahan regresi ini.
+
+Dengan menggunakan MSE sebagai metrik evaluasi, kita dapat mengukur seberapa baik model dapat memprediksi nilai harga saham atau variabel numerik lainnya dalam dataset. Semakin kecil nilai MSE, semakin akurat prediksi model, dan sebaliknya. Berikut potongan kode dan hasil outputnya:
+
+```sh
+model_dict = {
+    'SVR': svr,
+    'GradientBoosting': gradient_boost,
+    'KNN': knn,
+}
+
+for name, model in model_dict.items():
+  models.loc[name, 'train_mse'] = mean_squared_error(y_train, model.predict(X_train))
+  models.loc[name, 'test_mse'] = mean_squared_error(y_test, model.predict(X_test))
+
+models.head()
+```
+
 
 
 
