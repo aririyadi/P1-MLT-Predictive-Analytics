@@ -75,7 +75,7 @@ Berdasarkan visualisasi di atas, kita memperoleh pemahaman yang lebih mendalam t
 
 ### Correlation Matrix
 
-![Correlation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/40b4be608e02ef93142d23f4ba1363f77ca71a8d/Gambar/4.png)
+![Correlation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/22ef231364015d7195c84ca6230777a11571d4e4/Gambar/4.png)
 
 Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel memiliki keterikatan dan korelasi yang kuat antar variabel lainnya.
 
