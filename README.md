@@ -98,8 +98,7 @@ Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membag
 ```sh
 X = meta.iloc[:, :-1].values
 y = meta.iloc[:, -1].values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=42)
-
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 print(f'Total Dataset: {len(X)}')
 print(f'Total Train Dataset: {len(X_train)}')
 print(f'Total Test Dataset: {len(X_test)}')
@@ -110,8 +109,13 @@ print(f'Total Test Dataset: {len(X_test)}')
 - Total Test Dataset: 302
 
 ### Data Normalization
-Setelah membagi dataset, langkah selanjutnya adalah melakukan normalisasi data menggunakan Min-Max Scaling. Normalisasi ini dilakukan untuk memastikan bahwa nilai-nilai dalam fitur memiliki rentang yang seragam dan dapat membantu model mengatasi skala yang berbeda di antara fitur-fitur tersebut. Normalisasi data membantu memastikan bahwa model tidak terlalu dipengaruhi oleh skala absolut dari nilai-nilai dalam fitur-fitur, dan ini dapat meningkatkan performa model, terutama untuk algoritma yang sensitif terhadap skala.
+Setelah membagi dataset, langkah selanjutnya adalah melakukan normalisasi data menggunakan Min-Max Scaling. Normalisasi ini dilakukan untuk memastikan bahwa nilai-nilai dalam fitur memiliki rentang yang seragam dan dapat membantu model mengatasi skala yang berbeda di antara fitur-fitur tersebut. Normalisasi data membantu memastikan bahwa model tidak terlalu dipengaruhi oleh skala absolut dari nilai-nilai dalam fitur-fitur, dan ini dapat meningkatkan performa model, terutama untuk algoritma yang sensitif terhadap skala. Berikut potongan kode untuk Data Normalization:
 
+```sh
+scaler = MinMaxScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+```
 
 ## Modeling
 
