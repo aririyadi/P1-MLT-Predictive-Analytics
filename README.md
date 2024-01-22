@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning – Ari Riyadi
+# Laporan Proyek Machine Learning – _Ari Riyadi_
 ## Domain Proyek
 
 #### Disusun oleh: Ari Riyadi
