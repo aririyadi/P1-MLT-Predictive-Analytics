@@ -137,7 +137,11 @@ svr.fit(X_train, y_train)
 ### Gradient Boosting
 #### Kode:
 ```sh
-gradient_boost = GradientBoostingRegressor(criterion='squared_error', learning_rate=0.01, n_estimators=1000)
+gradient_boost = GradientBoostingRegressor(
+criterion='squared_error',
+learning_rate=0.01,
+n_estimators=1000
+)
 gradient_boost.fit(X_train, y_train)
 ```
 #### Parameter yang Digunakan:
