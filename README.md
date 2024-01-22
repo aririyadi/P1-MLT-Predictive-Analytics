@@ -121,7 +121,11 @@ X_test = scaler.transform(X_test)
 Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyelesaikan permasalahan, yaitu Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN).
 
 ### Support Vector Regression (SVR)
-
+#### Kode:
+```sh
+svr = SVR(C=10, gamma=0.3, kernel='rbf')
+svr.fit(X_train, y_train)
+```
 #### Parameter yang Digunakan:
 -	C=10 : Parameter penalti yang mengontrol toleransi terhadap kesalahan.
 -	gamma=0.3 : Parameter kernel untuk 'rbf' yang mengontrol bentuk dari fungsi basis Gaussian.
@@ -131,6 +135,11 @@ Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyel
 -	Kekurangan: Sensitif terhadap pemilihan parameter dan dapat memerlukan waktu komputasi yang cukup besar.
 
 ### Gradient Boosting
+#### Kode:
+```sh
+gradient_boost = GradientBoostingRegressor(criterion='squared_error', learning_rate=0.01, n_estimators=1000)
+gradient_boost.fit(X_train, y_train)
+```
 #### Parameter yang Digunakan:
 -	learning_rate=0.01: Tingkat pembelajaran yang mengontrol seberapa besar model beradaptasi terhadap kesalahan sebelumnya.
 -	n_estimators=1000: Jumlah pohon keputusan yang dibangun.
@@ -140,6 +149,11 @@ o	Kelebihan: Tingkat akurasi tinggi, dapat menangani data berdimensi tinggi dan 
 o	Kekurangan: Rentan terhadap overfitting, dan hyperparameter tuning dapat memakan waktu.
 
 ### K-Nearest Neighbors (KNN)
+#### Kode:
+```sh
+knn = KNeighborsRegressor(n_neighbors=9)
+knn.fit(X_train, y_train)
+```
 #### Parameter yang Digunakan:
 -	n_neighbors=9: Jumlah tetangga yang digunakan untuk memprediksi nilai.
 #### Kelebihan dan Kekurangan:
