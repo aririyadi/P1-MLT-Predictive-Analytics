@@ -9,8 +9,6 @@ Dalam era globalisasi dan pasar keuangan yang dinamis, pengambilan keputusan yan
 
 Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga saham META Platforms, Inc., memberikan nilai tambah dalam pengambilan keputusan investasi, dan meningkatkan pemahaman tentang bagaimana data historis dapat digunakan untuk meramalkan perilaku pasar keuangan.
 
-
-
 ## Business Understanding
 ### Problem Statements
 - Bagaimana menganalisis secara efektif data historis harga saham META Platforms, Inc. Agar mendapatkan wawasan yang mendalam terkait dengan pergerakan dan faktor-faktor yang mempengaruhi harga saham tersebut?
@@ -31,6 +29,8 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 - Mengimplementasikan teknik feature engineering dengan menguji dan memilih variabel yang paling relevan untuk meningkatkan kualitas input data bagi model prediktif.
 #### 3. Penyetelan Hyperparameter Menggunakan Teknik Grid Search
 - Melakukan penyetelan hyperparameter agar model dapat beroperasi dengan performa terbaik, menggunakan teknik Grid Search.
+
+Kaitan antara ketiga elemen tersebut terletak pada fakta bahwa Problem Statements mengidentifikasi tantangan yang perlu diatasi, Goals menetapkan tujuan yang harus dicapai, dan Solution Statements memberikan solusi konkret untuk mencapai tujuan tersebut. Seluruh rangkaian ini membentuk kerangka kerja yang koheren untuk proyek analisis prediktif pada data historis harga saham META Platforms, Inc.
 
 ## Data Understanding
 Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
