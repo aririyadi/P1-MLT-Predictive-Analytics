@@ -166,7 +166,9 @@ knn.fit(X_train, y_train)
 
 
 ## Evaluation
+Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah Mean Squared Error (MSE). MSE digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. MSE mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
 
+$$MSE = \frac{1}{N} \Sigma_{i=1}^N({y_i}- y\_pred_i)^2$$
 
 
 
