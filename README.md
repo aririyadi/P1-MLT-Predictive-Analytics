@@ -79,13 +79,24 @@ Berdasarkan visualisasi di atas, kita memperoleh pemahaman yang lebih mendalam t
 
 Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel memiliki keterikatan dan korelasi yang kuat antar variabel lainnya.
 
-
-
-
-
-
-
 ## Data Preparation
+
+### Menghapus Fitur Yang Tidak Diperlukan
+Penghapusan fitur-fitur (Date, Volume dan Close) bertujuan untuk menyederhanakan dataset dan fokus pada atribut yang dianggap lebih relevan atau akurat dalam konteks analisis atau pembuatan model yang dilakukan. Berikut potongan kode dan hasil outputnya:
+
+```sh
+meta = meta.drop(['Date', 'Volume', 'Close'], axis=1)
+meta.head()
+```
+
+![Correlation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/22ef231364015d7195c84ca6230777a11571d4e4/Gambar/4.png)
+
+
+### Melakukan Pembagian Dataset
+Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membagi dataset menjadi dua bagian: data pelatihan (80%) untuk melatih model dan data pengujian (20%) untuk menguji kinerja model pada data baru. Proporsi 80% untuk data pelatihan dipilih untuk memastikan model mendapatkan sejumlah besar data untuk belajar, sedangkan 20% sisanya digunakan untuk pengujian, memungkinkan evaluasi objektif terhadap kemampuan prediktif model.
+
+### Data Normalization
+Setelah membagi dataset, langkah selanjutnya adalah melakukan normalisasi data menggunakan Min-Max Scaling. Normalisasi ini dilakukan untuk memastikan bahwa nilai-nilai dalam fitur memiliki rentang yang seragam dan dapat membantu model mengatasi skala yang berbeda di antara fitur-fitur tersebut. Normalisasi data membantu memastikan bahwa model tidak terlalu dipengaruhi oleh skala absolut dari nilai-nilai dalam fitur-fitur, dan ini dapat meningkatkan performa model, terutama untuk algoritma yang sensitif terhadap skala.
 
 
 ## Modeling
