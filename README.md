@@ -38,11 +38,25 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 ## Data Understanding
 Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
 Dataset ini dapat diunduh di Kaggle : META Stock Historical Prices & Data.
+
 ### Berikut informasi pada dataset:
-•	Dataset memiliki format CSV (Comma-Seperated Values).
-•	Dataset memiliki 1509 Data & 7 Kolom (Date, Open, High, Low, Close, Adj Close, Volume)
-•	Dataset memiliki 1 fitur bertipe object, 5 fitur bertipe float64 dan 1 fitur bertipe int64.
-•	Tidak ada missing value dalam dataset.
+- Dataset memiliki format CSV (Comma-Seperated Values).
+- Dataset memiliki 1509 Data & 7 Kolom (Date, Open, High, Low, Close, Adj Close, Volume).
+- Dataset memiliki 1 fitur bertipe object, 5 fitur bertipe float64 dan 1 fitur bertipe int64.
+- Tidak ada missing value dalam dataset.
+
+### Variabel-variabel pada Dataset: 
+- Date : Tanggal transaksi saham. 
+- Open : harga saham pada saat pembukaan pasar pada tanggal tertentu.
+- High : harga saham tertinggi yang dicapai pada tanggal tertentu.
+- Low : harga saham terendah yang dicapai pada tanggal tertentu.
+- Close : harga saham pada saat penutupan pasar pada tanggal tertentu.
+- Adj Close (Adjusted Close) : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
+- Volume : jumlah saham yang diperdagangkan pada tanggal tertentu.
+
+### Exploratory Data Analysis - Outliers
+Berikut visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
+![Outliers](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/3219872e29cf2c104976997dc3b8440cbd4ef0f5/Gambar/1.png)
 
 
 
