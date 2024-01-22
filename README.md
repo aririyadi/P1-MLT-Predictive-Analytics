@@ -35,7 +35,17 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 #### 3. Penyetelan Hyperparameter Menggunakan Teknik Grid Search
 - Melakukan penyetelan hyperparameter agar model dapat beroperasi dengan performa terbaik, menggunakan teknik Grid Search.
 
+## Data Understanding
 
+
+
+## Data Preparation
+
+
+## Modeling
+
+
+## Evaluation
 
 
 
