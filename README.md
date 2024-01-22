@@ -197,9 +197,16 @@ models.head()
 
 ![Evaluation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/38efe068cfb92cdf9ac63cabc5dfed135e58e8a2/Gambar/6.png)
 
+### Visualization of Model Comparison
+Berikut potongan Kode untuk Plot Chart dan Visualisasinya:
 
+```sh
+fig, ax = plt.subplots()
+models.sort_values(by='test_mse', ascending=False).plot(kind='barh', ax=ax, zorder=3)
+ax.grid(zorder=0)
+```
 
-
+![Plot](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/3e9c692e82b71be8e2b02bdf7438a51aa9dcd709/Gambar/7.png)
 
 
 
