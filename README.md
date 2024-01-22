@@ -1,8 +1,8 @@
 # Laporan Proyek Machine Learning – Ari Riyadi
 ## Domain Proyek
-- **Disusun oleh: Ari Riyadi**
 
-Proyek Pertama Machine Learning Terapan - Predictive Analytics, Studi Kasus: _META Stock Historical Prices & Data_.
+### Disusun oleh: Ari Riyadi
+Proyek Pertama Machine Learning Terapan - Predictive Analytics untuk Meramalkan Harga Saham: Studi Kasus dengan Dataset _META Stock Historical Prices & Data_.
 
 ![Outliers](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/25483c828a5967fd6bf0ea34a473cfbf620d481d/Gambar/dataset-cover.png)
 
