@@ -37,7 +37,8 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 
 ## Data Understanding
 Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
-Dataset ini dapat diunduh di Kaggle : META Stock Historical Prices & Data.
+Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](https://www.kaggle.com/nikoskolimitras/metastock-historical-prices-and-data).
+
 
 ### Berikut informasi pada dataset:
 - Dataset memiliki format CSV (Comma-Seperated Values).
