@@ -1,6 +1,8 @@
 # Laporan Proyek Machine Learning – Ari Riyadi
 ## Domain Proyek
 **Disusun oleh : Ari Riyadi**
+![Outliers](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/25483c828a5967fd6bf0ea34a473cfbf620d481d/Gambar/dataset-cover.png)
+
 ### Latar Belakang
 Dalam era globalisasi dan pasar keuangan yang dinamis, pengambilan keputusan yang tepat dalam investasi menjadi semakin penting. Salah satu alat yang telah menjadi fokus perhatian adalah analisis prediktif, yang memungkinkan para investor untuk membuat keputusan yang lebih informasional dan cerdas. Dalam konteks ini, proyek ini akan berfokus pada penerapan analisis prediktif terhadap data historis harga dan data terkait saham META Platforms, Inc.
 
