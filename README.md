@@ -36,6 +36,23 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 - Melakukan penyetelan hyperparameter agar model dapat beroperasi dengan performa terbaik, menggunakan teknik Grid Search.
 
 ## Data Understanding
+Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
+Dataset ini dapat diunduh di Kaggle : META Stock Historical Prices & Data.
+### Berikut informasi pada dataset:
+•	Dataset memiliki format CSV (Comma-Seperated Values).
+•	Dataset memiliki 1509 Data & 7 Kolom (Date, Open, High, Low, Close, Adj Close, Volume)
+•	Dataset memiliki 1 fitur bertipe object, 5 fitur bertipe float64 dan 1 fitur bertipe int64.
+•	Tidak ada missing value dalam dataset.
+
+
+
+
+
+
+
+
+
+
 
 
 
