@@ -56,7 +56,9 @@ Dataset ini dapat diunduh di Kaggle : META Stock Historical Prices & Data.
 
 ### Exploratory Data Analysis - Outliers
 Berikut visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
+
 ![Outliers](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/3219872e29cf2c104976997dc3b8440cbd4ef0f5/Gambar/1.png)
+
 Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara 25% dan 75%.
 
 
