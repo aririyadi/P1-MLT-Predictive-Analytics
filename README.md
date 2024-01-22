@@ -26,7 +26,13 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 - Membangun model analisis prediktif yang memiliki tingkat akurasi yang tinggi dalam meramalkan pergerakan harga saham META Platforms, Inc. Metrik evaluasi dapat mencakup Mean Squared Error (MSE) atau akurasi prediksi yang dapat diukur.
 
 ### Solution statements
-#### Menerapkan Teknik Analisis Prediktif dengan Machine Learning Algorithms
+#### 1. Menerapkan Teknik Analisis Prediktif dengan Machine Learning Algorithms
+- Menggunakan algoritma seperti Support Vector Machine (untuk Support Vector Regression), K-Nearest Neighbors, dan Boosting Algorithm (untuk Gradient Boosting Regression) untuk melakukan analisis prediktif pada data historis harga saham META Platforms, Inc.
+#### 2.	Optimasi Data Preprocessing untuk Kualitas Dataset yang Lebih Baik
+•	Melakukan preprocessing data dengan cermat, termasuk identifikasi dan penanganan outlier secara efisien untuk mencegah pengaruh yang tidak diinginkan pada model.
+•	Menyusun strategi yang efektif dalam mengelola missing values, baik dengan metode imputasi atau penghapusan data yang tidak lengkap.
+•	Mengimplementasikan teknik feature engineering dengan menguji dan memilih variabel yang paling relevan untuk meningkatkan kualitas input data bagi model prediktif.
+#### 3.	Penyetelan Hyperparameter Menggunakan Teknik Grid Search
 
 
 
