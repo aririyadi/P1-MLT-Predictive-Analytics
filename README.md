@@ -118,6 +118,33 @@ X_test = scaler.transform(X_test)
 ```
 
 ## Modeling
+Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyelesaikan permasalahan, yaitu Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN).
+
+### Support Vector Regression (SVR)
+
+#### Parameter yang Digunakan:
+-	C=10 : Parameter penalti yang mengontrol toleransi terhadap kesalahan.
+-	gamma=0.3 : Parameter kernel untuk 'rbf' yang mengontrol bentuk dari fungsi basis Gaussian.
+-	kernel='rbf ': Jenis kernel yang digunakan.
+#### Kelebihan dan Kekurangan:
+-	Kelebihan: Mampu menangani data non-linier dan bekerja baik dengan data berdimensi tinggi.
+-	Kekurangan: Sensitif terhadap pemilihan parameter dan dapat memerlukan waktu komputasi yang cukup besar.
+
+### Gradient Boosting
+#### Parameter yang Digunakan:
+-	learning_rate=0.01: Tingkat pembelajaran yang mengontrol seberapa besar model beradaptasi terhadap kesalahan sebelumnya.
+-	n_estimators=1000: Jumlah pohon keputusan yang dibangun.
+-	criterion='squared_error': Kriteria untuk mengukur kualitas split.
+#### Kelebihan dan Kekurangan:
+o	Kelebihan: Tingkat akurasi tinggi, dapat menangani data berdimensi tinggi dan fitur yang tidak terstruktur.
+o	Kekurangan: Rentan terhadap overfitting, dan hyperparameter tuning dapat memakan waktu.
+
+### K-Nearest Neighbors (KNN)
+#### Parameter yang Digunakan:
+-	n_neighbors=9: Jumlah tetangga yang digunakan untuk memprediksi nilai.
+#### Kelebihan dan Kekurangan:
+-	Kelebihan: Sederhana, mudah diimplementasikan, bekerja baik untuk dataset kecil.
+-	Kekurangan: Rentan terhadap noise dan outlier, performa dapat dipengaruhi oleh pemilihan jumlah tetangga.
 
 
 ## Evaluation
