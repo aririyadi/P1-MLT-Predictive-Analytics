@@ -89,7 +89,7 @@ meta = meta.drop(['Date', 'Volume', 'Close'], axis=1)
 meta.head()
 ```
 
-![Correlation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/22ef231364015d7195c84ca6230777a11571d4e4/Gambar/4.png)
+![Data-Preparation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/87625f805e773ded0654bd22d67dfd0a0b820fcd/Gambar/5.png)
 
 
 ### Melakukan Pembagian Dataset
