@@ -198,7 +198,7 @@ models.head()
 ![Evaluation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/38efe068cfb92cdf9ac63cabc5dfed135e58e8a2/Gambar/6.png)
 
 ### Visualization of Model Comparison
-Berikut potongan Kode untuk Plot Chart dan Visualisasinya:
+Berikut potongan kode untuk membuat chart dan visualisasi perbandingan model:
 
 ```sh
 fig, ax = plt.subplots()
@@ -209,7 +209,24 @@ ax.grid(zorder=0)
 ![Plot](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/3e9c692e82b71be8e2b02bdf7438a51aa9dcd709/Gambar/7.png)
 
 
+### Prediction
+Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang telah dilatih merespons terhadap subset data uji yang telah dipilih. Hal ini membantu dalam mengevaluasi kemampuan prediktif model pada situasi yang belum pernah dilihat sebelumnya dan memberikan gambaran tentang sejauh mana model dapat menghasilkan prediksi yang mendekati nilai sebenarnya. Berikut potongan kode dan hasil outputnya:
 
+```sh
+num_rows_to_predict = 1
+X_test_subset = X_test[:num_rows_to_predict, :]
+y_test_subset = y_test[:num_rows_to_predict]
+
+pred_dict = {'y_true': y_test_subset}
+
+for name, model in model_dict.items():
+    predictions = model.predict(X_test_subset).round(1)
+    pred_dict['prediksi_' + name] = predictions
+
+pd.DataFrame(pred_dict)
+```
+
+![Prediction](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/de67fea791d39f125d1ae0a5655a9347b865d35c/Gambar/8.png)
 
 
 
