@@ -306,6 +306,9 @@ Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model a
 
 $MSE = \frac{1}{N} \Sigma_{i=1}^N({y_i}- y\_pred_i)^2$
 
+MSE = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2
+
+
 
 MSE mengukur seberapa dekat prediksi model dengan nilai sebenarnya. Semakin rendah MSE, semakin baik model dalam memprediksi nilai target.
 
