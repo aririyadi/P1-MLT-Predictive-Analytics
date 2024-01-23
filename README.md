@@ -239,10 +239,15 @@ svr.fit(X_train, y_train)
 -	**C=10** : Parameter penalti yang mengontrol toleransi terhadap kesalahan.
 -	**gamma=0.3** : Parameter kernel untuk '_rbf_' yang mengontrol bentuk dari fungsi basis Gaussian.
 -	**kernel='rbf** ': Jenis kernel yang digunakan.
+
+#### Cara Kerja:
+- SVR digunakan untuk tugas regresi, memprediksi nilai numerik (harga saham) berdasarkan fitur-fitur tertentu.
+- Membentuk hyperplane dengan margin maksimum dari titik data target.
+- Miminimalkan deviasi atau kesalahan prediksi dari nilai aktual dengan mempertimbangkan batasan margin.
   
 #### Kelebihan dan Kekurangan:
--	Kelebihan: Mampu menangani data non-linier dan bekerja baik dengan data berdimensi tinggi.
--	Kekurangan: Sensitif terhadap pemilihan parameter dan dapat memerlukan waktu komputasi yang cukup besar.
+-	**Kelebihan**: Mampu menangani data non-linier dan bekerja baik dengan data berdimensi tinggi.
+-	**Kekurangan**: Sensitif terhadap pemilihan parameter dan dapat memerlukan waktu komputasi yang cukup besar.
 
 ### Gradient Boosting
 #### Kode:
@@ -255,12 +260,19 @@ n_estimators=1000
 gradient_boost.fit(X_train, y_train)
 ```
 #### Parameter yang Digunakan:
--	learning_rate=0.01: Tingkat pembelajaran yang mengontrol seberapa besar model beradaptasi terhadap kesalahan sebelumnya.
--	n_estimators=1000: Jumlah pohon keputusan yang dibangun.
--	criterion='squared_error': Kriteria untuk mengukur kualitas split.
+-	**learning_rate=0.01**: Tingkat pembelajaran yang mengontrol seberapa besar model beradaptasi terhadap kesalahan sebelumnya.
+-	**n_estimators=1000**: Jumlah pohon keputusan yang dibangun.
+-	**criterion='squared_error'**: Kriteria untuk mengukur kualitas split.
+
+#### Cara Kerja:
+
+- _Boosting_ membangun serangkaian model secara berurutan, setiap model fokus pada mengoreksi kesalahan model sebelumnya.
+- _Gradient Boosting_ bekerja dengan mengoptimalkan fungsi objektif berdasarkan gradien dari kesalahan prediksi.
+- Menggabungkan prediksi dari model-model lemah untuk membentuk prediksi yang lebih akurat.
+
 #### Kelebihan dan Kekurangan:
-o	Kelebihan: Tingkat akurasi tinggi, dapat menangani data berdimensi tinggi dan fitur yang tidak terstruktur.
-o	Kekurangan: Rentan terhadap overfitting, dan hyperparameter tuning dapat memakan waktu.
+- **Kelebihan**: Tingkat akurasi tinggi, dapat menangani data berdimensi tinggi dan fitur yang tidak terstruktur.
+-	**Kekurangan**: Rentan terhadap _overfitting_, dan _hyperparameter tuning_ dapat memakan waktu.
 
 ### K-Nearest Neighbors (KNN)
 #### Kode:
@@ -269,11 +281,23 @@ knn = KNeighborsRegressor(n_neighbors=9)
 knn.fit(X_train, y_train)
 ```
 #### Parameter yang Digunakan:
--	n_neighbors=9: Jumlah tetangga yang digunakan untuk memprediksi nilai.
-#### Kelebihan dan Kekurangan:
--	Kelebihan: Sederhana, mudah diimplementasikan, bekerja baik untuk dataset kecil.
--	Kekurangan: Rentan terhadap noise dan outlier, performa dapat dipengaruhi oleh pemilihan jumlah tetangga.
+-	**n_neighbors=9**: Jumlah tetangga yang digunakan untuk memprediksi nilai.
 
+#### Cara Kerja:
+
+- KNN memprediksi nilai dengan mencari k titik terdekat dalam ruang fitur.
+- Prediksi dilakukan dengan mengambil rata-rata atau mayoritas dari nilai-nilai target dari tetangga terdekat.
+- Bergantung pada pengukuran jarak, seperti _Euclidean distance_ atau _Manhattan distance_.
+
+#### Kelebihan dan Kekurangan:
+-	**Kelebihan**: Sederhana, mudah diimplementasikan, bekerja baik untuk dataset kecil.
+-	**Kekurangan**: Rentan terhadap noise dan outlier, performa dapat dipengaruhi oleh pemilihan jumlah tetangga.
+
+### Penjelasan Bagaimana Algoritma Bekerja:
+
+- **_SVR_**: Membentuk hyperplane dengan margin maksimum untuk memprediksi nilai regresi dengan meminimalkan kesalahan prediksi.
+- **_Gradient Boosting_**: Membangun serangkaian model prediksi secara berurutan dan menggabungkan prediksi untuk meningkatkan akurasi.
+- **_KNN_**: Memanfaatkan informasi dari tetangga terdekat untuk memprediksi nilai berdasarkan rata-rata atau mayoritas tetangga.
 
 ## Evaluation
 Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah Mean Squared Error (MSE). MSE digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. MSE mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
