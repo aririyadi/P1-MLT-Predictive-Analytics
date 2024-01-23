@@ -64,12 +64,7 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 | **75%**   | 279.190   | 285.240   | 276.310   | 281.000   | 281.000   | 2.788780e+07  |
 | **max**   | 381.680   | 384.330   | 378.810   | 382.180   | 382.180   | 2.323166e+08  |
 
-
-![3](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/bc96475d-4429-4478-82a7-6671d10a5e25)
-
-**Gambar 3**. Informasi statistik pada masing-masing kolom
-
-Menggunakan fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom, antara lain:
+Tabel 1. memberikan informasi statistik pada masing-masing kolom, antara lain:
 
 - **Count**  adalah jumlah sampel pada data.
 - **Mean** adalah nilai rata-rata.
@@ -90,66 +85,28 @@ Menggunakan fungsi ```describe()``` memberikan informasi statistik pada masing-m
 - _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
 ### Exploratory Data Analysis - Tren Waktu Saham META Platforms
-Berikut adalah kode dan visualisasi yang menggambarkan tren waktu terhadap harga saham _META Platforms_:
+Berikut visualisasi yang menggambarkan tren waktu terhadap harga saham _META Platforms_:
 
-```sh
-meta['Date'] = pd.to_datetime(meta['Date'])
-plt.figure(figsize=(12, 6))
-plt.plot(meta['Date'], meta['Adj Close'], label='Adj Close', color='blue')
-plt.title('Tren Waktu Harga Saham META')
-plt.xlabel('Tahun')
-plt.ylabel('Harga Penutupan')
-plt.legend()
-plt.show()
-```
 ![4](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/ea6b1283-1087-454d-907d-fb0e8f142be3)
 
-**Gambar 4**. Grafik Tren Waktu saham META Platforms, Inc
+**Gambar 3**. Grafik Tren Waktu saham META Platforms, Inc
 
 Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham META Platforms, Inc. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
 
 ### Exploratory Data Analysis - _Outliers_
-Berikut potongan kode dan visualisasi data META dengan boxplot untuk mendeteksi _outliers_ pada beberapa fitur numerik:
+Berikut visualisasi data META dengan boxplot untuk mendeteksi _outliers_ pada beberapa fitur numerik:
 
-```sh
-plt.subplots(figsize=(10,7))
-sns.boxplot(data=meta).set_title("META Platforms, Inc")
-plt.show()
-```
 ![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/604f16cb-ad9b-47c6-9fd6-8081abbff042)
 
+**Gambar 4**. Visualisasi Mendeteksi _Outlier_
 
-**Gambar 5**. Visualisasi Mendeteksi _Outlier_
-
-Dari visualisasi data, hanya fitur Volume saja yang memiliki _outlier_. Untuk menangani _outlier_ kita akan menggunakan _IQR Method_ yaitu dengan menghapus data yang berada diluar _IQR_. Berikut kode untuk menghapusnya:
-
-```sh
-numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns
-Q1 = meta[numeric_columns].quantile(0.25)
-Q3 = meta[numeric_columns].quantile(0.75)
-IQR = Q3 - Q1
-meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]
-print(meta.shape)
-```
-Berikut Penjelasan Kodenya:
-
-- ```numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns```: Memilih hanya kolom-kolom numerik (_float64_ dan _int64_) dari dataset. Ini termasuk kolom seperti _'Open', 'High', 'Low', 'Close', 'Adj Close', dan 'Volume'_.
-- ```Q1 = meta[numeric_columns].quantile(0.25)```: Menghitung nilai kuartil pertama (25th percentile) untuk setiap kolom numerik.
-- ```Q3 = meta[numeric_columns].quantile(0.75)```: Menghitung nilai kuartil ketiga (75th percentile) untuk setiap kolom numerik.
-- ```IQR = Q3 - Q1```: Menghitung rentang interkuartil (IQR) untuk setiap kolom numerik.
-- ```((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR)))```: Menandai data sebagai _outlier_ jika berada di luar rentang ```(Q1 - 1.5 * IQR)``` hingga ```(Q3 + 1.5 * IQR)```.
-- ```meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]```: Menghapus baris yang mengandung setidaknya satu _outlier_ dalam setiap kolom numerik.
-- ```print(meta.shape)```: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus _outlier_.
+Dari visualisasi data, hanya fitur Volume saja yang memiliki _outlier_. Untuk menangani _outlier_ kita akan menggunakan _IQR Method_ yaitu dengan menghapus data yang berada diluar _IQR_.
 
 ### _Exploratory Data Analysis - Univariate Analysis_
-```sh
-meta.hist(bins=50, figsize=(20,15))
-plt.show()
-```
 
 ![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f96839e4-d4bf-4fb8-b448-d865e5fb2ee5)
 
-**Gambar 6**. Histogram Fitur Numerik - _Univariate Analysis_
+**Gambar 5**. Histogram Fitur Numerik - _Univariate Analysis_
 
 Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yang merupakan fitur target (label) pada data kita. Dari histogram "Adj Close", kita bisa memperoleh beberapa informasi, antara lain:
 
@@ -157,9 +114,7 @@ Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yan
 - Setengah harga saham META bernilai di bawah $203000.
 
 ### _Exploratory Data Analysis - Multivariate Analysis_
-```sh
-sns.pairplot(meta, diag_kind = 'kde')
-```
+
 ![7](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f2ece70e-cc59-4f35-be8a-23b3619af727)
 
 **Gambar 7**. Visualisasi Hubungan Antar Fitur Numerik - _Multivariate Analysis_
@@ -167,12 +122,6 @@ sns.pairplot(meta, diag_kind = 'kde')
 Berdasarkan visualisasi di atas, kita memperoleh pemahaman yang lebih mendalam tentang interaksi dan ketergantungan antar variabel numerik dalam dataset. Hasil analisis ini dapat menjadi dasar untuk pemilihan fitur dalam pembangunan model prediktif, serta memberikan wawasan yang diperlukan untuk langkah-langkah analisis selanjutnya.
 
 ### _Correlation Matrix_
-```sh
-plt.figure(figsize=(10, 8))
-correlation_matrix = meta.corr().round(2)
-sns.heatmap(data=correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5, )
-plt.title("Correlation Matrix untuk Fitur Numerik ", size=10)
-```
 
 ![8](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c9e460d2-2c4d-463c-afa1-5065b48c19b0)
 
@@ -185,11 +134,7 @@ Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel me
 ### Menghapus Fitur Yang Tidak Diperlukan
 Penghapusan fitur-fitur (_Date, Volume dan Close_) bertujuan untuk menyederhanakan dataset dan fokus pada atribut yang dianggap lebih relevan atau akurat dalam konteks analisis atau pembuatan model yang dilakukan. Berikut potongan kode dan hasil outputnya dalam bentuk tabel:
 
-```sh
-meta = meta.drop(['Date', 'Volume', 'Close'], axis=1)
-meta.head()
-```
-**Tabel 1**. Data Harga Saham META setelah Penghapusan Fitur
+**Tabel 2**. Data Harga Saham META setelah Penghapusan Fitur
 |   Open      |    High     |    Low      |  Adj Close  |
 |-------------|-------------|-------------|-------------|
 | 181.880005  | 184.779999  | 181.330002  | 184.669998  |
@@ -198,20 +143,12 @@ meta.head()
 | 187.199997  | 188.899994  | 186.330002  | 188.279999  |
 | 188.699997  | 188.800003  | 187.100006  | 187.869995  |
 
-Pada Tabel 1, dapat dilihat bahwa fitur-fitur Date, Volume, dan Close telah dihapus dari dataset, meninggalkan hanya fitur-fitur Open, High, Low, dan Adj Close. Pembersihan ini bertujuan untuk menyederhanakan dataset dan memfokuskan perhatian pada atribut yang dianggap lebih relevan.
+Pada Tabel 2, dapat dilihat bahwa fitur-fitur Date, Volume, dan Close telah dihapus dari dataset, meninggalkan hanya fitur-fitur Open, High, Low, dan Adj Close. Pembersihan ini bertujuan untuk menyederhanakan dataset dan memfokuskan perhatian pada atribut yang dianggap lebih relevan.
 
 ### Melakukan Pembagian Dataset
-Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membagi dataset menjadi dua bagian: data pelatihan (80%) untuk melatih model dan data pengujian (20%) untuk menguji kinerja model pada data baru. Proporsi 80% untuk data pelatihan dipilih untuk memastikan model mendapatkan sejumlah besar data untuk belajar, sedangkan 20% sisanya digunakan untuk pengujian, memungkinkan evaluasi objektif terhadap kemampuan prediktif model. Berikut potongan kode dan hasil outputnya:
+Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membagi dataset menjadi dua bagian: data pelatihan (80%) untuk melatih model dan data pengujian (20%) untuk menguji kinerja model pada data baru. Proporsi 80% untuk data pelatihan dipilih untuk memastikan model mendapatkan sejumlah besar data untuk belajar, sedangkan 20% sisanya digunakan untuk pengujian, memungkinkan evaluasi objektif terhadap kemampuan prediktif model.
 
-```sh
-X = meta.iloc[:, :-1].values
-y = meta.iloc[:, -1].values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-print(f'Total Dataset: {len(X)}')
-print(f'Total Train Dataset: {len(X_train)}')
-print(f'Total Test Dataset: {len(X_test)}')
-```
-**Output:**
+**Hasil Pembagian Dataset:**
 - Total Dataset: 1422
 - Total Train Dataset: 1137
 - Total Test Dataset: 285
@@ -219,13 +156,6 @@ print(f'Total Test Dataset: {len(X_test)}')
 ### Data Normalization
 _Min-Max Scaling_ (_MinMaxScaler_) adalah salah satu teknik normalisasi yang digunakan untuk mengubah nilai-nilai dalam dataset ke dalam rentang tertentu, umumnya antara 0 dan 1. Pemilihan parameter pada _Min-Max Scaling_ dapat mempengaruhi performa model dan penyesuaian normalisasi terhadap data.
 
-**Kode :**
-
-```sh
-scaler = MinMaxScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-```
 Dalam konteks proyek analisis prediktif pada data historis harga saham META Platforms, penggunaan _Min-Max Scaling_ dengan penyesuaian parameter '_feature_range_' memiliki dampak penting pada normalisasi data. Dalam dataset harga saham, variabel seperti harga pembukaan (_Open_), harga tertinggi (_High_), harga terendah (_Low_), dan harga penutupan yang disesuaikan (_Adj Close_) mungkin memiliki rentang nilai yang cukup besar. Dengan menggunakan _Min-Max Scaling_, kita dapat mengonversi nilai-nilai ini ke dalam rentang tertentu, memastikan bahwa model dapat memahami dan memproses perbedaan skala antar fitur.
 
 Misalnya, pada proyek ini, harga saham yang bervariasi dari ratusan dolar hingga puluhan ribu dolar. Dengan mengatur '_feature_range_' menjadi rentang yang lebih besar seperti (-1, 1), kita dapat mempertahankan perbedaan relatif antara nilai-nilai tersebut. Pemilihan rentang yang sesuai dapat menjadi kunci untuk mencegah kehilangan informasi yang signifikan dan memastikan model lebih responsif terhadap variasi nilai.
@@ -236,11 +166,7 @@ Dengan demikian, penggunaan _Min-Max Scaling_ dengan penyesuaian parameter '_fea
 Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyelesaikan permasalahan, yaitu _Support Vector Regression (SVR)_, _Gradient Boosting_, dan _K-Nearest Neighbors (KNN)_.
 
 ### _Support Vector Regression (SVR)_
-#### Kode:
-```sh
-svr = SVR(C=10, gamma=0.3, kernel='rbf')
-svr.fit(X_train, y_train)
-```
+
 #### Parameter yang Digunakan:
 -	**C=10** : Parameter penalti yang mengontrol toleransi terhadap kesalahan.
 -	**gamma=0.3** : Parameter kernel untuk '_rbf_' yang mengontrol bentuk dari fungsi basis Gaussian.
@@ -256,15 +182,7 @@ svr.fit(X_train, y_train)
 -	**Kekurangan**: Sensitif terhadap pemilihan parameter dan dapat memerlukan waktu komputasi yang cukup besar.
 
 ### Gradient Boosting
-#### Kode:
-```sh
-gradient_boost = GradientBoostingRegressor(
-criterion='squared_error',
-learning_rate=0.01,
-n_estimators=1000
-)
-gradient_boost.fit(X_train, y_train)
-```
+
 #### Parameter yang Digunakan:
 -	**learning_rate=0.01**: Tingkat pembelajaran yang mengontrol seberapa besar model beradaptasi terhadap kesalahan sebelumnya.
 -	**n_estimators=1000**: Jumlah pohon keputusan yang dibangun.
@@ -281,11 +199,7 @@ gradient_boost.fit(X_train, y_train)
 -	**Kekurangan**: Rentan terhadap _overfitting_, dan _hyperparameter tuning_ dapat memakan waktu.
 
 ### K-Nearest Neighbors (KNN)
-#### Kode:
-```sh
-knn = KNeighborsRegressor(n_neighbors=9)
-knn.fit(X_train, y_train)
-```
+
 #### Parameter yang Digunakan:
 -	**n_neighbors=9**: Jumlah tetangga yang digunakan untuk memprediksi nilai.
 
@@ -323,35 +237,17 @@ Dengan demikian, _MSE_ mengukur rata-rata kuadrat dari selisih antara nilai sebe
 ### Analisis _Mean Squared Error (MSE)_:
 Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk mengukur seberapa baik model regresi dapat memprediksi nilai target.
 
-**Kode:**
-```sh
-model_dict = {
-    'SVR': svr,
-    'GradientBoosting': gradient_boost,
-    'KNN': knn,
-}
-for name, model in model_dict.items():
-  models.loc[name, 'train_mse'] = mean_squared_error(y_train, model.predict(X_train))
-  models.loc[name, 'test_mse'] = mean_squared_error(y_test, model.predict(X_test))
-models.head()
-```
-**Tabel 2**. Evaluasi Model berdasarkan _Mean Squared Error (MSE)_
+**Tabel 3**. Evaluasi Model berdasarkan _Mean Squared Error (MSE)_
 | Model             | Train MSE  | Test MSE   |
 |-------------------|------------|------------|
 | SVR               | 13.521845  | 16.769305  |
 | KNN               | 3.954466   | 5.931945   |
 | GradientBoosting  | 2.236794   | 6.715785   |
 
-Tabel 2. memperlihatkan hasil evaluasi performa tiga model berbeda (_SVR, KNN, dan Gradient Boosting_) berdasarkan _Mean Squared Error (MSE)_. _MSE_ diukur pada data pelatihan (_Train MSE_) dan data pengujian (_Test MSE_). Semakin kecil nilai _MSE_, semakin baik kinerja model dalam memprediksi nilai target.
+Tabel 3. memperlihatkan hasil evaluasi performa tiga model berbeda (_SVR, KNN, dan Gradient Boosting_) berdasarkan _Mean Squared Error (MSE)_. _MSE_ diukur pada data pelatihan (_Train MSE_) dan data pengujian (_Test MSE_). Semakin kecil nilai _MSE_, semakin baik kinerja model dalam memprediksi nilai target.
 
 ### Visualization of Model Comparison
 
-**Kode:**
-```sh
-fig, ax = plt.subplots()
-models.sort_values(by='test_mse', ascending=False).plot(kind='barh', ax=ax, zorder=3)
-ax.grid(zorder=0)
-```
 ![9](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/21e2bcf4-3e50-4efb-81de-70c30a0ce79d)
 
 **Berikut adalah analisis lebih lanjut dari grafik diatas:**
@@ -368,22 +264,12 @@ _Gradient Boosting_ memiliki _MSE_ yang rendah pada data pelatihan, tetapi terda
 ### Prediction
 Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang telah dilatih merespons terhadap subset data uji yang telah dipilih. Hal ini membantu dalam mengevaluasi kemampuan prediktif model pada situasi yang belum pernah dilihat sebelumnya dan memberikan gambaran tentang sejauh mana model dapat menghasilkan prediksi yang mendekati nilai sebenarnya. Berikut potongan kode dan hasil outputnya:
 
-```sh
-num_rows_to_predict = 1
-X_test_subset = X_test[:num_rows_to_predict, :]
-y_test_subset = y_test[:num_rows_to_predict]
-pred_dict = {'y_true': y_test_subset}
-for name, model in model_dict.items():
-    predictions = model.predict(X_test_subset).round(1)
-    pred_dict['prediksi_' + name] = predictions
-pd.DataFrame(pred_dict)
-```
-**Tabel 3**. Perbandingan Hasil Prediksi dengan Nilai Sebenarnya
+**Tabel 4**. Perbandingan Hasil Prediksi dengan Nilai Sebenarnya
 | y_true       | prediksi_SVR | prediksi_GradientBoosting | prediksi_KNN |
 |--------------|--------------|---------------------------|--------------|
 | 177.970001   | 177.3        | 178.9                     | 178.4        |
 
-Tabel 3. menunjukkan perbandingan antara nilai sebenarnya (_y_true_) dengan hasil prediksi dari tiga model yang digunakan: _Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN)_. Dalam setiap kolom prediksi, terdapat nilai prediksi yang diperoleh dari masing-masing model.
+Tabel 4. menunjukkan perbandingan antara nilai sebenarnya (_y_true_) dengan hasil prediksi dari tiga model yang digunakan: _Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN)_. Dalam setiap kolom prediksi, terdapat nilai prediksi yang diperoleh dari masing-masing model.
 
 ## Conclusion
 Dalam proyek analisis prediktif harga saham META Platforms, Inc. sejumlah tantangan dan tujuan telah diidentifikasi. Pendekatan terstruktur digunakan, menerapkan teknik analisis prediktif dengan algoritma Machine Learning seperti _Support Vector Regression, K-Nearest Neighbors, dan Boosting Algorithm_. Fokus utama proyek ini adalah pada optimasi data preprocessing, termasuk penanganan _outlier_, manajemen _missing values_, dan penerapan _feature engineering_. Penyetelan _hyperparameter_ dilakukan melalui teknik _Grid Search_ untuk memastikan model bekerja dengan performa terbaik. Keseluruhan, proyek ini bertujuan memberikan wawasan mendalam mengenai pergerakan harga saham META Platforms, Inc. dan membangun model prediktif yang akurat. Harapannya, hasil analisis ini dapat memberikan nilai tambah dalam pengambilan keputusan investasi serta meningkatkan pemahaman tentang pemanfaatan data historis dalam meramalkan perilaku pasar keuangan.
