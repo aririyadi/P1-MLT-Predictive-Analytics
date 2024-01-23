@@ -39,18 +39,8 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 - Dataset memiliki format CSV (_Comma-Seperated Values_).
 - Dataset memiliki 1509 rows & 7 columns seperti (_Date, Open, High, Low, Close, Adj Close, Volume_).
 - Terdapat 1 kolom dengan tipe data _object_, 5 kolom numerik dengan tipe data _float64_ dan 1 kolom numerik dengan tipe data _int64_.
-
-![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/747fc8ae-9c1e-498d-aa36-0aac1b386a22)
-
-**Gambar 1**. Informasi Mengenai Dataset
-
 - Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
-
-![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/2218b7ac-a842-478e-afdf-8522ff40baa5)
-
-**Gambar 2**. Indentifikasi _Missing Value_
-
-- Deskripsi statistik data dengan fitur ```describe()```.
+- Deskripsi statistik data dengan fungsi ```describe()```.
 
 **Tabel 1**. Informasi statistik pada masing-masing kolom
 |           | Open      | High      | Low       | Close     | Adj Close | Volume        |
@@ -64,7 +54,9 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 | **75%**   | 279.190   | 285.240   | 276.310   | 281.000   | 281.000   | 2.788780e+07  |
 | **max**   | 381.680   | 384.330   | 378.810   | 382.180   | 382.180   | 2.323166e+08  |
 
-Tabel 1. memberikan informasi statistik pada masing-masing kolom, antara lain:
+**Tabel 1.** memberikan informasi statistik pada masing-masing kolom, antara lain:
+
+**Keterangan:**
 
 - **Count**  adalah jumlah sampel pada data.
 - **Mean** adalah nilai rata-rata.
@@ -76,20 +68,20 @@ Tabel 1. memberikan informasi statistik pada masing-masing kolom, antara lain:
 - **Max** adalah nilai maksimum.
 
 ### Variabel-variabel pada Dataset: 
-- _Date_ : Tanggal transaksi saham. 
-- _Open_ : harga saham pada saat pembukaan pasar pada tanggal tertentu.
-- _High_ : harga saham tertinggi yang dicapai pada tanggal tertentu.
-- _Low_ : harga saham terendah yang dicapai pada tanggal tertentu.
-- _Close_ : harga saham pada saat penutupan pasar pada tanggal tertentu.
-- _Adj Close_ : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
-- _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
+- **_Date_** : Tanggal transaksi saham. 
+- **_Open_** : harga saham pada saat pembukaan pasar pada tanggal tertentu.
+- **_High_** : harga saham tertinggi yang dicapai pada tanggal tertentu.
+- **_Low_** : harga saham terendah yang dicapai pada tanggal tertentu.
+- **_Close_** : harga saham pada saat penutupan pasar pada tanggal tertentu.
+- **_Adj Close_** : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
+- **_Volume_** : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
 ### Exploratory Data Analysis - Tren Waktu Saham META Platforms
 Berikut visualisasi yang menggambarkan tren waktu terhadap harga saham _META Platforms_:
 
 ![4](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/ea6b1283-1087-454d-907d-fb0e8f142be3)
 
-**Gambar 3**. Grafik Tren Waktu saham META Platforms, Inc
+**Gambar 1**. Grafik Tren Waktu saham META Platforms, Inc
 
 Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham META Platforms, Inc. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
 
@@ -98,7 +90,7 @@ Berikut visualisasi data META dengan boxplot untuk mendeteksi _outliers_ pada be
 
 ![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/604f16cb-ad9b-47c6-9fd6-8081abbff042)
 
-**Gambar 4**. Visualisasi Mendeteksi _Outlier_
+**Gambar 2**. Visualisasi Mendeteksi _Outlier_
 
 Dari visualisasi data, hanya fitur Volume saja yang memiliki _outlier_. Untuk menangani _outlier_ kita akan menggunakan _IQR Method_ yaitu dengan menghapus data yang berada diluar _IQR_.
 
@@ -106,9 +98,9 @@ Dari visualisasi data, hanya fitur Volume saja yang memiliki _outlier_. Untuk me
 
 ![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f96839e4-d4bf-4fb8-b448-d865e5fb2ee5)
 
-**Gambar 5**. Histogram Fitur Numerik - _Univariate Analysis_
+**Gambar 3**. Histogram Fitur Numerik - _Univariate Analysis_
 
-Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yang merupakan fitur target (label) pada data kita. Dari histogram "Adj Close", kita bisa memperoleh beberapa informasi, antara lain:
+Mari amati histogram di atas, khususnya histogram untuk variabel "_Adj Close_" yang merupakan fitur target (label) pada data kita. Dari histogram "_Adj Close_", kita bisa memperoleh beberapa informasi, antara lain:
 
 - Rentang harga saham META cukup tinggi yaitu dari skala ratusan dolar Amerika hingga sekitar $273000.
 - Setengah harga saham META bernilai di bawah $203000.
@@ -117,7 +109,7 @@ Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yan
 
 ![7](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f2ece70e-cc59-4f35-be8a-23b3619af727)
 
-**Gambar 7**. Visualisasi Hubungan Antar Fitur Numerik - _Multivariate Analysis_
+**Gambar 4**. Visualisasi Hubungan Antar Fitur Numerik - _Multivariate Analysis_
 
 Berdasarkan visualisasi di atas, kita memperoleh pemahaman yang lebih mendalam tentang interaksi dan ketergantungan antar variabel numerik dalam dataset. Hasil analisis ini dapat menjadi dasar untuk pemilihan fitur dalam pembangunan model prediktif, serta memberikan wawasan yang diperlukan untuk langkah-langkah analisis selanjutnya.
 
@@ -125,7 +117,7 @@ Berdasarkan visualisasi di atas, kita memperoleh pemahaman yang lebih mendalam t
 
 ![8](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c9e460d2-2c4d-463c-afa1-5065b48c19b0)
 
-**Gambar 8**. Visualisasi Matriks Korelasi
+**Gambar 5**. Visualisasi Matriks Korelasi
 
 Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel memiliki keterikatan dan korelasi yang kuat antar variabel lainnya.
 
@@ -173,7 +165,7 @@ Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyel
 -	**kernel='rbf** ': Jenis kernel yang digunakan.
 
 #### Cara Kerja:
-- SVR digunakan untuk tugas regresi, memprediksi nilai numerik (harga saham) berdasarkan fitur-fitur tertentu.
+- _SVR_ digunakan untuk tugas regresi, memprediksi nilai numerik (harga saham) berdasarkan fitur-fitur tertentu.
 - Membentuk hyperplane dengan margin maksimum dari titik data target.
 - Miminimalkan deviasi atau kesalahan prediksi dari nilai aktual dengan mempertimbangkan batasan margin.
   
@@ -205,7 +197,7 @@ Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyel
 
 #### Cara Kerja:
 
-- KNN memprediksi nilai dengan mencari k titik terdekat dalam ruang fitur.
+- _KNN_ memprediksi nilai dengan mencari k titik terdekat dalam ruang fitur.
 - Prediksi dilakukan dengan mengambil rata-rata atau mayoritas dari nilai-nilai target dari tetangga terdekat.
 - Bergantung pada pengukuran jarak, seperti _Euclidean distance_ atau _Manhattan distance_.
 
