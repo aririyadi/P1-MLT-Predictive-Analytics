@@ -112,7 +112,7 @@ plt.show()
 ```
 ![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/521579fa-e4ce-48ad-8b4e-77a7b866eeff)
 
-**Gambar 4**. Visualisasi Mendeteksi Outlier
+**Gambar 5**. Visualisasi Mendeteksi Outlier
 
 Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR. Berikut kode untuk menghapusnya:
 
@@ -134,7 +134,9 @@ Berikut Penjelasan Kodenya:
 
 ### Exploratory Data Analysis - Univariate Analysis
 
-![Univariate](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/40b4be608e02ef93142d23f4ba1363f77ca71a8d/Gambar/2.png)
+![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/74593a73-e795-4795-864a-246333055294)
+
+**Gambar 6**. Histogram Fitur Numerik
 
 Mari amati histogram di atas, gambar histogram di atas memberikan visualisasi distribusi univariat dari suatu variabel pada dataset. Histogram tersebut menggambarkan distribusi frekuensi dari nilai-nilai pada variabel tertentu.
 
