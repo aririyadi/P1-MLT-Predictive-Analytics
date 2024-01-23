@@ -55,6 +55,25 @@ meta.isnull().sum()
 
 **Gambar 2**. Indentifikasi _Missing Value_
 
+- Deskripsi statistik data dengan fitur ```describe()```.
+```sh
+meta.describe()
+```
+![3](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/bc96475d-4429-4478-82a7-6671d10a5e25)
+
+**Gambar 3**. Informasi statistik pada masing-masing kolom
+
+Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom, antara lain:
+
+- Count  adalah jumlah sampel pada data.
+- Mean adalah nilai rata-rata.
+- Std adalah standar deviasi.
+- Min yaitu nilai minimum setiap kolom. 
+- 25% adalah kuartil pertama. Kuartil adalah nilai yang menandai batas interval dalam empat bagian sebaran yang sama. 
+- 50% adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
+- 75% adalah kuartil ketiga.
+- Max adalah nilai maksimum.
+
 ### Variabel-variabel pada Dataset: 
 - _Date_ : Tanggal transaksi saham. 
 - _Open_ : harga saham pada saat pembukaan pasar pada tanggal tertentu.
