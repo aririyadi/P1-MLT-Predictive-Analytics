@@ -123,8 +123,14 @@ IQR=Q3-Q1
 meta=meta[~((meta<(Q1-1.5*IQR))|(meta>(Q3+1.5*IQR))).any(axis=1)]
 meta.shape
 ```
+Berikut Penjelasan Kodenya:
 
-
+- Q1 = meta.quantile(0.25): Menghitung kuartil pertama (25th percentile) dari setiap kolom dalam dataset.
+- Q3 = meta.quantile(0.75): Menghitung kuartil ketiga (75th percentile) dari setiap kolom dalam dataset.
+- IQR = Q3 - Q1: Menghitung rentang interkuartil (IQR) untuk setiap kolom dalam dataset.
+- ((meta < (Q1 - 1.5 * IQR)) | (meta > (Q3 + 1.5 * IQR))): Menandai data sebagai outlier jika berada di luar rentang (Q1 - 1.5 * IQR) hingga (Q3 + 1.5 * IQR).
+- meta[~((meta < (Q1 - 1.5 * IQR)) | (meta > (Q3 + 1.5 * IQR))).any(axis=1)]: Menghapus baris yang mengandung setidaknya satu outlier dalam setiap kolom.
+- meta.shape: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus outlier.
 
 ### Exploratory Data Analysis - Univariate Analysis
 
