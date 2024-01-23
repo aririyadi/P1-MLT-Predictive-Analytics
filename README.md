@@ -44,6 +44,8 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 meta = pd.read_csv('META.csv')
 meta.info()
 ```
+![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/14c24fdd-35ad-45dd-8bdc-f1d46b183534)
+
 - Dataset memiliki 1 fitur bertipe object, 5 fitur bertipe float64 dan 1 fitur bertipe int64.
 - Tidak ada missing value dalam dataset.
 
