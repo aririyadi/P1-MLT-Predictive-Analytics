@@ -184,8 +184,13 @@ meta = meta.drop(['Date', 'Volume', 'Close'], axis=1)
 meta.head()
 ```
 
-![Data-Preparation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/87625f805e773ded0654bd22d67dfd0a0b820fcd/Gambar/5.png)
-
+|   Open      |    High     |    Low      |  Adj Close  |
+|-------------|-------------|-------------|-------------|
+| 181.880005  | 184.779999  | 181.330002  | 184.669998  |
+| 184.899994  | 186.210007  | 184.100006  | 184.330002  |
+| 185.589996  | 186.899994  | 184.929993  | 186.850006  |
+| 187.199997  | 188.899994  | 186.330002  | 188.279999  |
+| 188.699997  | 188.800003  | 187.100006  | 187.869995  |
 
 ### Melakukan Pembagian Dataset
 Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membagi dataset menjadi dua bagian: data pelatihan (80%) untuk melatih model dan data pengujian (20%) untuk menguji kinerja model pada data baru. Proporsi 80% untuk data pelatihan dipilih untuk memastikan model mendapatkan sejumlah besar data untuk belajar, sedangkan 20% sisanya digunakan untuk pengujian, memungkinkan evaluasi objektif terhadap kemampuan prediktif model. Berikut potongan kode dan hasil outputnya:
