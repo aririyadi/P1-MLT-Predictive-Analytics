@@ -135,7 +135,7 @@ Penghapusan fitur-fitur (_Date, Volume dan Close_) bertujuan untuk menyederhanak
 | 187.199997  | 188.899994  | 186.330002  | 188.279999  |
 | 188.699997  | 188.800003  | 187.100006  | 187.869995  |
 
-Pada Tabel 2, dapat dilihat bahwa fitur-fitur Date, Volume, dan Close telah dihapus dari dataset, meninggalkan hanya fitur-fitur Open, High, Low, dan Adj Close. Pembersihan ini bertujuan untuk menyederhanakan dataset dan memfokuskan perhatian pada atribut yang dianggap lebih relevan.
+Pada Tabel 2, dapat dilihat bahwa fitur-fitur _Date, Volume,_ dan _Close_ telah dihapus dari dataset, meninggalkan hanya fitur-fitur _Open, High, Low, dan Adj Close_. Pembersihan ini bertujuan untuk menyederhanakan dataset dan memfokuskan perhatian pada atribut yang dianggap lebih relevan.
 
 ### Melakukan Pembagian Dataset
 Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membagi dataset menjadi dua bagian: data pelatihan (80%) untuk melatih model dan data pengujian (20%) untuk menguji kinerja model pada data baru. Proporsi 80% untuk data pelatihan dipilih untuk memastikan model mendapatkan sejumlah besar data untuk belajar, sedangkan 20% sisanya digunakan untuk pengujian, memungkinkan evaluasi objektif terhadap kemampuan prediktif model.
