@@ -103,9 +103,16 @@ plt.show()
 Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham META Platforms, Inc. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
 
 ### Exploratory Data Analysis - Outliers
-Berikut visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
+Berikut potongan kode dan visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
 
-![Outliers](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/3219872e29cf2c104976997dc3b8440cbd4ef0f5/Gambar/1.png)
+```sh
+plt.subplots(figsize=(10,7))
+sns.boxplot(data=meta).set_title("META Platforms, Inc")
+plt.show()
+```
+![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/521579fa-e4ce-48ad-8b4e-77a7b866eeff)
+
+**Gambar 4**. Visualisasi Mendeteksi Outlier
 
 Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara 25% dan 75%.
 
