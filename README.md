@@ -206,18 +206,22 @@ print(f'Total Train Dataset: {len(X_train)}')
 print(f'Total Test Dataset: {len(X_test)}')
 ```
 **Output:**
-- Total Dataset: 1509
-- Total Train Dataset: 1207
-- Total Test Dataset: 302
+- Total Dataset: 1422
+- Total Train Dataset: 1137
+- Total Test Dataset: 285
 
 ### Data Normalization
-Setelah membagi dataset, langkah selanjutnya adalah melakukan normalisasi data menggunakan Min-Max Scaling. Normalisasi ini dilakukan untuk memastikan bahwa nilai-nilai dalam fitur memiliki rentang yang seragam dan dapat membantu model mengatasi skala yang berbeda di antara fitur-fitur tersebut. Normalisasi data membantu memastikan bahwa model tidak terlalu dipengaruhi oleh skala absolut dari nilai-nilai dalam fitur-fitur, dan ini dapat meningkatkan performa model, terutama untuk algoritma yang sensitif terhadap skala. Berikut potongan kode untuk Data Normalization:
+Min-Max Scaling (MinMaxScaler) adalah salah satu teknik normalisasi yang digunakan untuk mengubah nilai-nilai dalam dataset ke dalam rentang tertentu, umumnya antara 0 dan 1. Pemilihan parameter pada Min-Max Scaling dapat mempengaruhi performa model dan penyesuaian normalisasi terhadap data.
+
+**Kode :**
 
 ```sh
 scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
+Jelaskan lebih lanjut mengenai pemilihan parameter pada Min-Max Scaling dan bagaimana hal tersebut dapat memengaruhi performa model.
+
 
 ## Modeling
 Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyelesaikan permasalahan, yaitu Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN).
