@@ -118,11 +118,12 @@ plt.show()
 Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR. Berikut kode untuk menghapusnya:
 
 ```sh
-Q1 = meta.quantile(0.25)
-Q3 = meta.quantile(0.75)
-IQR=Q3-Q1
-meta=meta[~((meta<(Q1-1.5*IQR))|(meta>(Q3+1.5*IQR))).any(axis=1)]
-meta.shape
+numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns
+Q1 = meta[numeric_columns].quantile(0.25)
+Q3 = meta[numeric_columns].quantile(0.75)
+IQR = Q3 - Q1
+meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]
+print(meta.shape)
 ```
 Berikut Penjelasan Kodenya:
 
