@@ -306,21 +306,18 @@ Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model a
 
 $MSE = \frac{1}{N} \Sigma_{i=1}^{N} (y_i - \hat{y}_i)^2$
 
-**Keterangan:**
+**_Keterangan_:**
 - **N** adalah jumlah total observasi dalam dataset.
 - $\Sigma_{i=1}^N$ menunjukkan penjumlahan dari i=1 hingga N, yang berarti kita menjumlahkan seluruh observasi dalam dataset.
 - $(y_i - \hat{y}_i)^2$ adalah selisih kuadrat antara nilai sebenarnya dan nilai prediksi. Ini dilakukan untuk setiap observasi.
 - $\frac{1}{N}$ adalah invers dari jumlah total observasi (N), yang memberikan rata-rata dari selisih kuadrat.
 
-Dengan demikian, MSE mengukur rata-rata kuadrat dari selisih antara nilai sebenarnya dan nilai prediksi. Semakin kecil nilai MSE, semakin baik model dalam memprediksi nilai target. MSE memberikan penalti yang lebih besar untuk kesalahan yang lebih besar, dan karenanya, model diharapkan dapat menghasilkan prediksi yang lebih akurat.
-
-
-MSE mengukur seberapa dekat prediksi model dengan nilai sebenarnya. Semakin rendah MSE, semakin baik model dalam memprediksi nilai target.
+Dengan demikian, _MSE_ mengukur rata-rata kuadrat dari selisih antara nilai sebenarnya dan nilai prediksi. Semakin kecil nilai _MSE_, semakin baik model dalam memprediksi nilai target. _MSE_ memberikan penalti yang lebih besar untuk kesalahan yang lebih besar, dan karenanya, model diharapkan dapat menghasilkan prediksi yang lebih akurat.
 
 ### Hasil Proyek Berdasarkan Metrik Evaluasi:
--	Model dievaluasi menggunakan MSE pada data pengujian.
--	Semakin kecil nilai MSE, semakin baik kinerja model dalam menghasilkan prediksi yang akurat.
--	Model dengan MSE terendah dianggap sebagai solusi terbaik untuk menyelesaikan permasalahan regresi ini.
+-	Model dievaluasi menggunakan _MSE_ pada data pengujian.
+-	Semakin kecil nilai _MSE_, semakin baik kinerja model dalam menghasilkan prediksi yang akurat.
+-	Model dengan _MSE_ terendah dianggap sebagai solusi terbaik untuk menyelesaikan permasalahan regresi ini.
 
 Dengan menggunakan MSE sebagai metrik evaluasi, kita dapat mengukur seberapa baik model dapat memprediksi nilai harga saham atau variabel numerik lainnya dalam dataset. Semakin kecil nilai MSE, semakin akurat prediksi model, dan sebaliknya. Berikut potongan kode dan hasil outputnya:
 
