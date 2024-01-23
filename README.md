@@ -40,17 +40,20 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 - Dataset memiliki 1509 rows & 7 columns seperti (_Date, Open, High, Low, Close, Adj Close, Volume_).
 - Terdapat 1 kolom dengan tipe data object, 5 kolom numerik dengan tipe data float64 dan 1 kolom numerik dengan tipe data int64. Berikut potongan kode dan outputnya:
 ```sh
-meta.isnull().sum()
+meta = pd.read_csv('META.csv')
+meta.info()
 ```
 ![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/747fc8ae-9c1e-498d-aa36-0aac1b386a22)
 
-Gambar 1. Informasi mengenai Dataset
+Gambar 1. Informasi Mengenai Dataset
 
 - Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
 ```sh
 meta.isnull().sum()
 ```
 ![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/2218b7ac-a842-478e-afdf-8522ff40baa5)
+
+Gambar 2. Indentifikasi _Missing Value_
 
 ### Variabel-variabel pada Dataset: 
 - _Date_ : Tanggal transaksi saham. 
