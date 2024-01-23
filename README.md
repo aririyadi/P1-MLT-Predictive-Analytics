@@ -300,7 +300,7 @@ knn.fit(X_train, y_train)
 - **_KNN_**: Memanfaatkan informasi dari tetangga terdekat untuk memprediksi nilai berdasarkan rata-rata atau mayoritas tetangga.
 
 ## Evaluation
-Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah _Mean Squared Error (MSE)_. _MSE_ digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. MSE mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
+Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah _Mean Squared Error (MSE)_. _MSE_ digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. _MSE_ mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
 
 ### Formula _Mean Squared Error (MSE)_:
 
@@ -308,6 +308,18 @@ $MSE = \frac{1}{N} \Sigma_{i=1}^N({y_i}- y\_pred_i)^2$
 
 $MSE = \frac{1}{N} \Sigma_{i=1}^{N} (y_i - \hat{y}_i)^2$
 
+### Formula Mean Squared Error (MSE):
+
+MSE = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2
+
+Formula Mean Squared Error (MSE) digunakan untuk mengukur seberapa dekat prediksi model (dinotasikan dengan \hat{y}_i) dengan nilai sebenarnya (y_i) pada setiap observasi dalam dataset. Berikut adalah penjelasan komponen-komponen formula tersebut:
+
+- N adalah jumlah total observasi dalam dataset.
+- ∑_{i=1}^{N} menunjukkan penjumlahan dari i=1 hingga N, yang berarti kita menjumlahkan seluruh observasi dalam dataset.
+- (y_i - \hat{y}_i)^2 adalah selisih kuadrat antara nilai sebenarnya dan nilai prediksi. Ini dilakukan untuk setiap observasi.
+- \frac{1}{N} adalah invers dari jumlah total observasi (N), yang memberikan rata-rata dari selisih kuadrat.
+
+Dengan demikian, MSE mengukur rata-rata kuadrat dari selisih antara nilai sebenarnya dan nilai prediksi. Semakin kecil nilai MSE, semakin baik model dalam memprediksi nilai target. MSE memberikan penalti yang lebih besar untuk kesalahan yang lebih besar, dan karenanya, model diharapkan dapat menghasilkan prediksi yang lebih akurat.
 
 
 MSE mengukur seberapa dekat prediksi model dengan nilai sebenarnya. Semakin rendah MSE, semakin baik model dalam memprediksi nilai target.
