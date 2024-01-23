@@ -84,6 +84,10 @@ Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom,
 - _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
 ### Exploratory Data Analysis - Tren Waktu
+![4](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/ea6b1283-1087-454d-907d-fb0e8f142be3)
+
+**Gambar 4**. Grafik Tren Waktu saham META Platforms, Inc
+
 
 
 ### Exploratory Data Analysis - Outliers
