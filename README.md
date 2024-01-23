@@ -304,13 +304,10 @@ Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model a
 
 ### Formula _Mean Squared Error (MSE)_:
 
-$MSE = \frac{1}{N} \Sigma_{i=1}^N({y_i}- y\_pred_i)^2$
-
 $MSE = \frac{1}{N} \Sigma_{i=1}^{N} (y_i - \hat{y}_i)^2$
 
-**Berikut adalah penjelasan komponen-komponen formula tersebut:**
-
-- N adalah jumlah total observasi dalam dataset.
+**Keterangan:**
+- **N** adalah jumlah total observasi dalam dataset.
 - $\Sigma_{i=1}^N$ menunjukkan penjumlahan dari i=1 hingga N, yang berarti kita menjumlahkan seluruh observasi dalam dataset.
 - $(y_i - \hat{y}_i)^2$ adalah selisih kuadrat antara nilai sebenarnya dan nilai prediksi. Ini dilakukan untuk setiap observasi.
 - $\frac{1}{N}$ adalah invers dari jumlah total observasi (N), yang memberikan rata-rata dari selisih kuadrat.
