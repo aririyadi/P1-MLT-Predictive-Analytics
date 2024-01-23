@@ -348,6 +348,17 @@ ax.grid(zorder=0)
 ```
 ![9](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/21e2bcf4-3e50-4efb-81de-70c30a0ce79d)
 
+**Berikut adalah analisis lebih lanjut dari grafik diatas:**
+
+**_Support Vector Regression (SVR)_:**
+_SVR_ memiliki performa yang kurang baik dengan _MSE_ yang tinggi pada data pengujian. Model mungkin terlalu kompleks atau memerlukan penyesuaian parameter untuk meningkatkan generalisasi.
+
+**_K-Nearest Neighbors (KNN)_:**
+_KNN_ menunjukkan hasil yang lebih baik dibandingkan _SVR_, tetapi masih terdapat perbedaan antara _MSE_ pelatihan dan pengujian. Model mungkin perlu disesuaikan untuk mengatasi _overfitting_ atau _underfitting_.
+
+**_Gradient Boosting_:**
+_Gradient Boosting_ memiliki _MSE_ yang rendah pada data pelatihan, tetapi terdapat peningkatan pada data pengujian. Mungkin diperlukan penyetelan parameter atau teknik _regularisasi_ untuk meningkatkan _generalisasi_.
+
 ### Prediction
 Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang telah dilatih merespons terhadap subset data uji yang telah dipilih. Hal ini membantu dalam mengevaluasi kemampuan prediktif model pada situasi yang belum pernah dilihat sebelumnya dan memberikan gambaran tentang sejauh mana model dapat menghasilkan prediksi yang mendekati nilai sebenarnya. Berikut potongan kode dan hasil outputnya:
 
@@ -355,26 +366,30 @@ Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang tela
 num_rows_to_predict = 1
 X_test_subset = X_test[:num_rows_to_predict, :]
 y_test_subset = y_test[:num_rows_to_predict]
-
 pred_dict = {'y_true': y_test_subset}
-
 for name, model in model_dict.items():
     predictions = model.predict(X_test_subset).round(1)
     pred_dict['prediksi_' + name] = predictions
-
 pd.DataFrame(pred_dict)
 ```
+**Tabel 3**. Perbandingan Hasil Prediksi dengan Nilai Sebenarnya
+| y_true       | prediksi_SVR | prediksi_GradientBoosting | prediksi_KNN |
+|--------------|--------------|---------------------------|--------------|
+| 177.970001   | 177.3        | 178.9                     | 178.4        |
 
-![Prediction](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/de67fea791d39f125d1ae0a5655a9347b865d35c/Gambar/8.png)
+
+Tabel 3. menunjukkan perbandingan antara nilai sebenarnya (_y_true_) dengan hasil prediksi dari tiga model yang digunakan: _Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN)_. Dalam setiap kolom prediksi, terdapat nilai prediksi yang diperoleh dari masing-masing model.
 
 ## Referensi
-[1]. Brown, S. J., Rozeff, M. S., & Ball, R. (1976). The Influence of Institutional Investors on Myopic R&D Investment Behavior. Journal of Finance, 31(5), 1653-1665.
 
-[2]. Chen, J., Fan, Y., & Li, Q. (2014). Online Daily Stock Trading with Regularized Linear Models. Journal of Business & Economic Statistics, 32(2), 267-287.
+[1]. Brown, S. J., Rozeff, M. S., & Ball, R. (1976). The Influence of Institutional Investors on Myopic R&D Investment Behavior. *Journal of Finance*, 31(5), 1653-1665.
 
-[3]. Siegel, E. (2013). Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die. Wiley.
+[2]. Chen, J., Fan, Y., & Li, Q. (2014). Online Daily Stock Trading with Regularized Linear Models. *Journal of Business & Economic Statistics*, 32(2), 267-287.
 
-[4]. Heaton, J., Polson, N. G., & Witte, J. H. (2017). Deep Learning for Finance: Deep Portfolios. Applied Stochastic Models in Business and Industry, 33(1), 3-12.
+[3]. Siegel, E. (2013). *Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die*. Wiley.
+
+[4]. Heaton, J., Polson, N. G., & Witte, J. H. (2017). Deep Learning for Finance: Deep Portfolios. *Applied Stochastic Models in Business and Industry*, 33(1), 3-12.
+
 
 
 
