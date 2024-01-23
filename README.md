@@ -1,26 +1,26 @@
 # Laporan Proyek Machine Learning – _Ari Riyadi_
 ## Domain Proyek
-Dataset _META Platforms, Inc_. dipilih untuk proyek ini karena keberagaman data yang mencakup teks, gambar, dan metadata, serta ketersediaan data yang luas. Relevansi platform ini dengan tujuan analisis prediktif terletak pada jumlah pengguna yang besar dan potensi untuk mendukung proyek seperti analisis sentimen, prediksi perilaku pengguna, dan pengembangan model kecerdasan buatan. Karakteristik dataset yang mendukung analisis prediktif melibatkan ukuran sampel besar, ketersediaan label, dan variabel yang relevan, serta penelitian terhadap periode waktu yang memadai. Dengan demikian, pemilihan dataset ini didasarkan pada potensi untuk memberikan wawasan mendalam dan mendukung proyek analisis prediktif yang diinginkan.
+Dataset META Platforms, Inc. dipilih untuk proyek ini karena keberagaman data yang mencakup teks, gambar, dan metadata, serta ketersediaan data yang luas. Relevansi platform ini dengan tujuan analisis prediktif terletak pada jumlah pengguna yang besar dan potensi untuk mendukung proyek seperti analisis sentimen, prediksi perilaku pengguna, dan pengembangan model kecerdasan buatan. Karakteristik dataset yang mendukung analisis prediktif melibatkan ukuran sampel besar, ketersediaan label, dan variabel yang relevan, serta penelitian terhadap periode waktu yang memadai. Dengan demikian, pemilihan dataset ini didasarkan pada potensi untuk memberikan wawasan mendalam dan mendukung proyek analisis prediktif yang diinginkan.
 
 ### Latar Belakang
-Dalam era globalisasi dan pasar keuangan yang dinamis, pengambilan keputusan yang tepat dalam investasi menjadi semakin penting. Salah satu alat yang telah menjadi fokus perhatian adalah analisis prediktif, yang memungkinkan para investor untuk membuat keputusan yang lebih informasional dan cerdas. Dalam konteks ini, proyek ini akan berfokus pada penerapan analisis prediktif terhadap data historis harga dan data terkait saham _META Platforms, Inc_.
+Dalam era globalisasi dan pasar keuangan yang dinamis, pengambilan keputusan yang tepat dalam investasi menjadi semakin penting. Salah satu alat yang telah menjadi fokus perhatian adalah analisis prediktif, yang memungkinkan para investor untuk membuat keputusan yang lebih informasional dan cerdas. Dalam konteks ini, proyek ini akan berfokus pada penerapan analisis prediktif terhadap data historis harga dan data terkait saham META Platforms, Inc.
 
-Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga saham _META Platforms_, memberikan nilai tambah dalam pengambilan keputusan investasi, dan meningkatkan pemahaman tentang bagaimana data historis dapat digunakan untuk meramalkan perilaku pasar keuangan.
+Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga saham META Platforms, memberikan nilai tambah dalam pengambilan keputusan investasi, dan meningkatkan pemahaman tentang bagaimana data historis dapat digunakan untuk meramalkan perilaku pasar keuangan.
 
 ## Business Understanding
 ### Problem Statements
-- Bagaimana menganalisis secara efektif data historis harga saham _META Platforms, In_c. Agar mendapatkan wawasan yang mendalam terkait dengan pergerakan dan faktor-faktor yang mempengaruhi harga saham tersebut?
-- Bagaimana memproses data historis harga saham _META Platforms, Inc_. agar dapat digunakan secara optimal oleh model analisis prediktif?
-- Bagaimana membangun model analisis prediktif yang dapat memprediksi pergerakan harga saham _META Platforms, Inc_. dengan tingkat akurasi yang tinggi?
+- Bagaimana menganalisis secara efektif data historis harga saham META Platforms, Inc. Agar mendapatkan wawasan yang mendalam terkait dengan pergerakan dan faktor-faktor yang mempengaruhi harga saham tersebut?
+- Bagaimana memproses data historis harga saham META Platforms, Inc. agar dapat digunakan secara optimal oleh model analisis prediktif?
+- Bagaimana membangun model analisis prediktif yang dapat memprediksi pergerakan harga saham META Platforms, Inc. dengan tingkat akurasi yang tinggi?
 
 ### Goals
-- Mengembangkan analisis data historis harga saham _META Platforms, Inc_. yang memberikan wawasan mendalam terkait dengan pola dan tren pergerakan harga saham tersebut.
+- Mengembangkan analisis data historis harga saham META Platforms, Inc. yang memberikan wawasan mendalam terkait dengan pola dan tren pergerakan harga saham tersebut.
 - Memproses data historis dengan baik, termasuk menangani _outlier_, mengelola _missing values_, dan melakukan feature engineering yang relevan agar dapat menjadi input yang optimal untuk model prediktif.
-- Membangun model analisis prediktif yang memiliki tingkat akurasi yang tinggi dalam meramalkan pergerakan harga saham _META Platforms, Inc_. Metrik evaluasi dapat mencakup _Mean Squared Error (MSE)_ atau akurasi prediksi yang dapat diukur.
+- Membangun model analisis prediktif yang memiliki tingkat akurasi yang tinggi dalam meramalkan pergerakan harga saham META Platforms, Inc. Metrik evaluasi dapat mencakup _Mean Squared Error (MSE)_ atau akurasi prediksi yang dapat diukur.
 
 ### Solution statements
 #### 1. Menerapkan Teknik Analisis Prediktif dengan Machine Learning Algorithms
-- Menggunakan algoritma seperti _Support Vector Machine (untuk Support Vector Regression)_, _K-Nearest Neighbors_, dan _Boosting Algorithm (untuk Gradient Boosting Regression)_ untuk melakukan analisis prediktif pada data historis harga saham _META Platforms, Inc_.
+- Menggunakan algoritma seperti _Support Vector Machine (untuk Support Vector Regression)_, _K-Nearest Neighbors_, dan _Boosting Algorithm (untuk Gradient Boosting Regression)_ untuk melakukan analisis prediktif pada data historis harga saham META Platforms, Inc.
 #### 2. Optimasi Data Preprocessing untuk Kualitas Dataset yang Lebih Baik
 - Melakukan preprocessing data dengan cermat, termasuk identifikasi dan penanganan outlier secara efisien untuk mencegah pengaruh yang tidak diinginkan pada model.
 - Menyusun strategi yang efektif dalam mengelola missing values, baik dengan metode imputasi atau penghapusan data yang tidak lengkap.
@@ -28,10 +28,10 @@ Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga sa
 #### 3. Penyetelan Hyperparameter Menggunakan Teknik _Grid Search_
 - Melakukan penyetelan hyperparameter agar model dapat beroperasi dengan performa terbaik, menggunakan teknik _Grid Search_.
 
-Kaitan antara ketiga elemen tersebut terletak pada fakta bahwa Problem Statements mengidentifikasi tantangan yang perlu diatasi, Goals menetapkan tujuan yang harus dicapai, dan Solution Statements memberikan solusi konkret untuk mencapai tujuan tersebut. Seluruh rangkaian ini membentuk kerangka kerja yang koheren untuk proyek analisis prediktif pada data historis harga saham _META Platforms, Inc_.
+Kaitan antara ketiga elemen tersebut terletak pada fakta bahwa Problem Statements mengidentifikasi tantangan yang perlu diatasi, Goals menetapkan tujuan yang harus dicapai, dan Solution Statements memberikan solusi konkret untuk mencapai tujuan tersebut. Seluruh rangkaian ini membentuk kerangka kerja yang koheren untuk proyek analisis prediktif pada data historis harga saham META Platforms, Inc.
 
 ## Data Understanding
-Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham _META Platforms, Inc_.
+Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
 Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](https://www.kaggle.com/datasets/fhabibimoghaddam/meta-stock-historical-prices-and-data2).
 
 
@@ -98,9 +98,9 @@ plt.show()
 ```
 ![4](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/ea6b1283-1087-454d-907d-fb0e8f142be3)
 
-**Gambar 4**. Grafik Tren Waktu saham _META Platforms, Inc_
+**Gambar 4**. Grafik Tren Waktu saham META Platforms, Inc
 
-Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham _META Platforms, Inc_. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
+Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham META Platforms, Inc. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
 
 ### Exploratory Data Analysis - _Outliers_
 Berikut potongan kode dan visualisasi data META dengan boxplot untuk mendeteksi _outliers_ pada beberapa fitur numerik:
@@ -131,7 +131,7 @@ Berikut Penjelasan Kodenya:
 - ```Q1 = meta[numeric_columns].quantile(0.25)```: Menghitung nilai kuartil pertama (25th percentile) untuk setiap kolom numerik.
 - ```Q3 = meta[numeric_columns].quantile(0.75)```: Menghitung nilai kuartil ketiga (75th percentile) untuk setiap kolom numerik.
 - ```IQR = Q3 - Q1```: Menghitung rentang interkuartil (IQR) untuk setiap kolom numerik.
-- ```((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR)))```: Menandai data sebagai _outlier_ jika berada di luar rentang (Q1 - 1.5 * IQR) hingga (Q3 + 1.5 * IQR).
+- ```((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR)))```: Menandai data sebagai _outlier_ jika berada di luar rentang ```(Q1 - 1.5 * IQR)``` hingga ```(Q3 + 1.5 * IQR)```.
 - ```meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]```: Menghapus baris yang mengandung setidaknya satu _outlier_ dalam setiap kolom numerik.
 - ```print(meta.shape)```: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus _outlier_.
 
