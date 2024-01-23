@@ -40,6 +40,10 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 ### Berikut informasi pada dataset:
 - Dataset memiliki format CSV (Comma-Seperated Values).
 - Dataset memiliki 1509 Data & 7 Kolom (Date, Open, High, Low, Close, Adj Close, Volume).
+```sh
+meta = pd.read_csv('META.csv')
+meta.info()
+```
 - Dataset memiliki 1 fitur bertipe object, 5 fitur bertipe float64 dan 1 fitur bertipe int64.
 - Tidak ada missing value dalam dataset.
 
