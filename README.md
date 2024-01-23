@@ -135,7 +135,7 @@ Berikut Penjelasan Kodenya:
 - ```meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]```: Menghapus baris yang mengandung setidaknya satu _outlier_ dalam setiap kolom numerik.
 - ```print(meta.shape)```: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus _outlier_.
 
-### Exploratory Data Analysis - Univariate Analysis
+### Exploratory Data Analysis - _Univariate Analysis_
 ```sh
 meta.hist(bins=50, figsize=(20,15))
 plt.show()
@@ -143,22 +143,34 @@ plt.show()
 
 ![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f96839e4-d4bf-4fb8-b448-d865e5fb2ee5)
 
-**Gambar 6**. Histogram Fitur Numerik - Univariate Analysis
+**Gambar 6**. Histogram Fitur Numerik - _Univariate Analysis_
 
 Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yang merupakan fitur target (label) pada data kita. Dari histogram "Adj Close", kita bisa memperoleh beberapa informasi, antara lain:
 
 - Rentang harga saham META cukup tinggi yaitu dari skala ratusan dolar Amerika hingga sekitar $273000.
 - Setengah harga saham META bernilai di bawah $203000.
 
-### Exploratory Data Analysis - Multivariate Analysis
+### Exploratory Data Analysis - _Multivariate Analysis_
+```sh
+sns.pairplot(meta, diag_kind = 'kde')
+```
+![7](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f2ece70e-cc59-4f35-be8a-23b3619af727)
 
-![Multivariate](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/40b4be608e02ef93142d23f4ba1363f77ca71a8d/Gambar/3.png)
+**Gambar 7**. Visualisasi Hubungan Antar Fitur Numerik - _Multivariate Analysis_
 
 Berdasarkan visualisasi di atas, kita memperoleh pemahaman yang lebih mendalam tentang interaksi dan ketergantungan antar variabel numerik dalam dataset. Hasil analisis ini dapat menjadi dasar untuk pemilihan fitur dalam pembangunan model prediktif, serta memberikan wawasan yang diperlukan untuk langkah-langkah analisis selanjutnya.
 
-### Correlation Matrix
+### _Correlation Matrix_
+```sh
+plt.figure(figsize=(10, 8))
+correlation_matrix = meta.corr().round(2)
+sns.heatmap(data=correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5, )
+plt.title("Correlation Matrix untuk Fitur Numerik ", size=10)
+```
 
-![Correlation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/22ef231364015d7195c84ca6230777a11571d4e4/Gambar/4.png)
+![8](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c9e460d2-2c4d-463c-afa1-5065b48c19b0)
+
+**Gambar 8**. Visualisasi Matriks Korelasi
 
 Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel memiliki keterikatan dan korelasi yang kuat antar variabel lainnya.
 
