@@ -44,7 +44,8 @@ meta.info()
 ```
 ![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/14c24fdd-35ad-45dd-8bdc-f1d46b183534)
 
-Gambar 1. Informasi pada dataset dengan _fungsi info()_
+Gambar 1. Informasi pada dataset dengan fungsi ```info()```
+
 
 - Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
 ```sh
