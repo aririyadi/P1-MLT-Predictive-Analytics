@@ -84,6 +84,7 @@ Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom,
 - _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
 ### Exploratory Data Analysis - Tren Waktu Saham META Platforms
+Berikut adalah kode dan visualisasi yang menggambarkan tren waktu terhadap harga saham META Platforms:
 
 ```sh
 meta['Date'] = pd.to_datetime(meta['Date'])
