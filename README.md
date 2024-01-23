@@ -1,7 +1,5 @@
 # Laporan Proyek Machine Learning – _Ari Riyadi_
 ## Domain Proyek
-
-#### Disusun oleh: Ari Riyadi
 Dataset META Platforms, Inc. dipilih untuk proyek ini karena keberagaman data yang mencakup teks, gambar, dan metadata, serta ketersediaan data yang luas. Relevansi platform ini dengan tujuan analisis prediktif terletak pada jumlah pengguna yang besar dan potensi untuk mendukung proyek seperti analisis sentimen, prediksi perilaku pengguna, dan pengembangan model kecerdasan buatan. Karakteristik dataset yang mendukung analisis prediktif melibatkan ukuran sampel besar, ketersediaan label, dan variabel yang relevan, serta penelitian terhadap periode waktu yang memadai. Dengan demikian, pemilihan dataset ini didasarkan pada potensi untuk memberikan wawasan mendalam dan mendukung proyek analisis prediktif yang diinginkan.
 
 ### Latar Belakang
@@ -45,6 +43,8 @@ meta = pd.read_csv('META.csv')
 meta.info()
 ```
 ![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/14c24fdd-35ad-45dd-8bdc-f1d46b183534)
+
+Gambar 1. Informasi pada dataset dengan _fungsi info()_
 
 - Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
 ```sh
