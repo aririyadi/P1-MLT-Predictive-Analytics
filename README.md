@@ -300,10 +300,11 @@ knn.fit(X_train, y_train)
 - **_KNN_**: Memanfaatkan informasi dari tetangga terdekat untuk memprediksi nilai berdasarkan rata-rata atau mayoritas tetangga.
 
 ## Evaluation
-Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah Mean Squared Error (MSE). MSE digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. MSE mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
+Dalam proyek ini, metrik evaluasi yang digunakan untuk mengukur performa model adalah _Mean Squared Error (MSE)_. _MSE_ digunakan karena tugas ini merupakan masalah regresi, di mana kita berfokus pada prediksi nilai numerik. MSE mengukur rata-rata kuadrat dari selisih antara nilai prediksi dan nilai sebenarnya.
 
-### Formula Mean Squared Error (MSE):
-$MSE = \frac{1}{N} \Sigma_{i=1}^N({y_i}- y\_pred_i)^2$
+### Formula _Mean Squared Error (MSE)_:
+
+\[ \text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2 \]
 
 MSE mengukur seberapa dekat prediksi model dengan nilai sebenarnya. Semakin rendah MSE, semakin baik model dalam memprediksi nilai target.
 
@@ -327,8 +328,16 @@ for name, model in model_dict.items():
 
 models.head()
 ```
+**Tabel 2**. Evaluasi Model berdasarkan _Mean Squared Error (MSE)_
+| Model             | Train MSE  | Test MSE   |
+|-------------------|------------|------------|
+| SVR               | 13.521845  | 16.769305  |
+| KNN               | 3.954466   | 5.931945   |
+| GradientBoosting  | 2.236794   | 6.715785   |
 
-![Evaluation](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/38efe068cfb92cdf9ac63cabc5dfed135e58e8a2/Gambar/6.png)
+Tabel 2. memperlihatkan hasil evaluasi performa tiga model berbeda (_SVR, KNN, dan Gradient Boosting_) berdasarkan _Mean Squared Error (MSE)_. _MSE_ diukur pada data pelatihan (_Train MSE_) dan data pengujian (_Test MSE_). Semakin kecil nilai _MSE_, semakin baik kinerja model dalam memprediksi nilai target.
+
+
 
 ### Visualization of Model Comparison
 Berikut potongan kode untuk membuat chart dan visualisasi perbandingan model:
