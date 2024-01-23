@@ -379,6 +379,8 @@ pd.DataFrame(pred_dict)
 
 Tabel 3. menunjukkan perbandingan antara nilai sebenarnya (_y_true_) dengan hasil prediksi dari tiga model yang digunakan: _Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN)_. Dalam setiap kolom prediksi, terdapat nilai prediksi yang diperoleh dari masing-masing model.
 
+## Conclusion
+Dalam proyek analisis prediktif harga saham META Platforms, Inc. sejumlah tantangan dan tujuan telah diidentifikasi. Pendekatan terstruktur digunakan, menerapkan teknik analisis prediktif dengan algoritma Machine Learning seperti _Support Vector Regression, K-Nearest Neighbors, dan Boosting Algorithm_. Fokus utama proyek ini adalah pada optimasi data preprocessing, termasuk penanganan _outlier_, manajemen _missing values_, dan penerapan _feature engineering_. Penyetelan _hyperparameter_ dilakukan melalui teknik _Grid Search_ untuk memastikan model bekerja dengan performa terbaik. Keseluruhan, proyek ini bertujuan memberikan wawasan mendalam mengenai pergerakan harga saham META Platforms, Inc. dan membangun model prediktif yang akurat. Harapannya, hasil analisis ini dapat memberikan nilai tambah dalam pengambilan keputusan investasi serta meningkatkan pemahaman tentang pemanfaatan data historis dalam meramalkan perilaku pasar keuangan.
 
 ## Reference
 
