@@ -39,7 +39,7 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 - Dataset memiliki format CSV (_Comma-Seperated Values_).
 - Dataset memiliki 1509 rows & 7 columns seperti (_Date, Open, High, Low, Close, Adj Close, Volume_).
 - Terdapat 1 kolom dengan tipe data _object_, 5 kolom numerik dengan tipe data _float64_ dan 1 kolom numerik dengan tipe data _int64_.
-- Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
+- Tidak ada missing value dalam dataset.
 - Deskripsi statistik data dengan fungsi ```describe()```.
 
 **Tabel 1**. Informasi statistik pada masing-masing kolom
@@ -124,7 +124,7 @@ Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel me
 ## Data Preparation
 
 ### Menghapus Fitur Yang Tidak Diperlukan
-Penghapusan fitur-fitur (_Date, Volume dan Close_) bertujuan untuk menyederhanakan dataset dan fokus pada atribut yang dianggap lebih relevan atau akurat dalam konteks analisis atau pembuatan model yang dilakukan. Berikut potongan kode dan hasil outputnya dalam bentuk tabel:
+Penghapusan fitur-fitur (_Date, Volume dan Close_) bertujuan untuk menyederhanakan dataset dan fokus pada atribut yang dianggap lebih relevan atau akurat dalam konteks analisis atau pembuatan model yang dilakukan. Berikut hasil outputnya dalam bentuk tabel:
 
 **Tabel 2**. Data Harga Saham META setelah Penghapusan Fitur
 |   Open      |    High     |    Low      |  Adj Close  |
@@ -254,7 +254,7 @@ _KNN_ menunjukkan hasil yang lebih baik dibandingkan _SVR_, tetapi masih terdapa
 _Gradient Boosting_ memiliki _MSE_ yang rendah pada data pelatihan, tetapi terdapat peningkatan pada data pengujian. Mungkin diperlukan penyetelan parameter atau teknik _regularisasi_ untuk meningkatkan _generalisasi_.
 
 ### Prediction
-Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang telah dilatih merespons terhadap subset data uji yang telah dipilih. Hal ini membantu dalam mengevaluasi kemampuan prediktif model pada situasi yang belum pernah dilihat sebelumnya dan memberikan gambaran tentang sejauh mana model dapat menghasilkan prediksi yang mendekati nilai sebenarnya. Berikut potongan kode dan hasil outputnya:
+Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang telah dilatih merespons terhadap subset data uji yang telah dipilih. Hal ini membantu dalam mengevaluasi kemampuan prediktif model pada situasi yang belum pernah dilihat sebelumnya dan memberikan gambaran tentang sejauh mana model dapat menghasilkan prediksi yang mendekati nilai sebenarnya.
 
 **Tabel 4**. Perbandingan Hasil Prediksi dengan Nilai Sebenarnya
 | y_true       | prediksi_SVR | prediksi_GradientBoosting | prediksi_KNN |
@@ -268,18 +268,10 @@ Dalam proyek analisis prediktif harga saham META Platforms, Inc. sejumlah tantan
 
 ## Reference
 
-[1].   Brown, S. J., Rozeff, M. S., & Ball, R. (1976). The Influence of Institutional Investors on Myopic R&D Investment Behavior. *Journal of Finance*, 31(5), 1653-1665.
+**[1]**.   Brown, S. J., Rozeff, M. S., & Ball, R. (1976). The Influence of Institutional Investors on Myopic R&D Investment Behavior. *Journal of Finance*, 31(5), 1653-1665.
 
-[2].   Chen, J., Fan, Y., & Li, Q. (2014). Online Daily Stock Trading with Regularized Linear Models. *Journal of Business & Economic Statistics*, 32(2), 267-287.
+**[2]**.   Chen, J., Fan, Y., & Li, Q. (2014). Online Daily Stock Trading with Regularized Linear Models. *Journal of Business & Economic Statistics*, 32(2), 267-287.
 
-[3].   Siegel, E. (2013). *Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die*. Wiley.
+**[3]**.   Siegel, E. (2013). *Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die*. Wiley.
 
-[4].   Heaton, J., Polson, N. G., & Witte, J. H. (2017). Deep Learning for Finance: Deep Portfolios. *Applied Stochastic Models in Business and Industry*, 33(1), 3-12.
-
-
-
-
-
-
-
-
+**[4]**.   Heaton, J., Polson, N. G., & Witte, J. H. (2017). Deep Learning for Finance: Deep Portfolios. *Applied Stochastic Models in Business and Industry*, 33(1), 3-12.
