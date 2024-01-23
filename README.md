@@ -51,6 +51,18 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 **Gambar 2**. Indentifikasi _Missing Value_
 
 - Deskripsi statistik data dengan fitur ```describe()```.
+**Tabel 1**. Informasi statistik pada masing-masing kolom
+|           | Open      | High      | Low       | Close     | Adj Close | Volume        |
+|-----------|-----------|-----------|-----------|-----------|-----------|---------------|
+| **count** | 1509.000  | 1509.000  | 1509.000  | 1509.000  | 1509.000  | 1.509000e+03  |
+| **mean**  | 225.073   | 228.246   | 222.095   | 225.212   | 225.212   | 2.414811e+07  |
+| **std**   | 68.302    | 68.898    | 67.641    | 68.291    | 68.291    | 1.628735e+07  |
+| **min**   | 90.080    | 90.460    | 88.090    | 88.910    | 88.910    | 5.467500e+06  |
+| **25%**   | 174.500   | 176.900   | 172.040   | 174.600   | 174.600   | 1.539570e+07  |
+| **50%**   | 202.180   | 204.910   | 199.670   | 202.260   | 202.260   | 2.008990e+07  |
+| **75%**   | 279.190   | 285.240   | 276.310   | 281.000   | 281.000   | 2.788780e+07  |
+| **max**   | 381.680   | 384.330   | 378.810   | 382.180   | 382.180   | 2.323166e+08  |
+
 
 ![3](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/bc96475d-4429-4478-82a7-6671d10a5e25)
 
