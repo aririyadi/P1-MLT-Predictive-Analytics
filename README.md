@@ -110,7 +110,8 @@ plt.subplots(figsize=(10,7))
 sns.boxplot(data=meta).set_title("META Platforms, Inc")
 plt.show()
 ```
-![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/521579fa-e4ce-48ad-8b4e-77a7b866eeff)
+![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/604f16cb-ad9b-47c6-9fd6-8081abbff042)
+
 
 **Gambar 5**. Visualisasi Mendeteksi Outlier
 
@@ -125,12 +126,13 @@ meta.shape
 ```
 Berikut Penjelasan Kodenya:
 
-- Q1 = meta.quantile(0.25): Menghitung kuartil pertama (25th percentile) dari setiap kolom dalam dataset.
-- Q3 = meta.quantile(0.75): Menghitung kuartil ketiga (75th percentile) dari setiap kolom dalam dataset.
-- IQR = Q3 - Q1: Menghitung rentang interkuartil (IQR) untuk setiap kolom dalam dataset.
-- ((meta < (Q1 - 1.5 * IQR)) | (meta > (Q3 + 1.5 * IQR))): Menandai data sebagai outlier jika berada di luar rentang (Q1 - 1.5 * IQR) hingga (Q3 + 1.5 * IQR).
-- meta[~((meta < (Q1 - 1.5 * IQR)) | (meta > (Q3 + 1.5 * IQR))).any(axis=1)]: Menghapus baris yang mengandung setidaknya satu outlier dalam setiap kolom.
-- meta.shape: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus outlier.
+- numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns: Memilih hanya kolom-kolom numerik (float64 dan int64) dari dataset. Ini termasuk kolom seperti 'Open', 'High', 'Low', 'Close', 'Adj Close', dan 'Volume'.
+- Q1 = meta[numeric_columns].quantile(0.25): Menghitung nilai kuartil pertama (25th percentile) untuk setiap kolom numerik.
+- Q3 = meta[numeric_columns].quantile(0.75): Menghitung nilai kuartil ketiga (75th percentile) untuk setiap kolom numerik.
+- IQR = Q3 - Q1: Menghitung rentang interkuartil (IQR) untuk setiap kolom numerik.
+- ((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))): Menandai data sebagai outlier jika berada di luar rentang (Q1 - 1.5 * IQR) hingga (Q3 + 1.5 * IQR).
+- meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]: Menghapus baris yang mengandung setidaknya satu outlier dalam setiap kolom numerik.
+- print(meta.shape): Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus outlier.
 
 ### Exploratory Data Analysis - Univariate Analysis
 ```sh
