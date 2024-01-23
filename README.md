@@ -83,7 +83,7 @@ Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom,
 - _Adj Close_ : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
 - _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
-### Exploratory Data Analysis - Tren Waktu
+### Exploratory Data Analysis - Tren Waktu Saham META Platforms
 
 ```sh
 meta['Date'] = pd.to_datetime(meta['Date'])
@@ -99,7 +99,7 @@ plt.show()
 
 **Gambar 4**. Grafik Tren Waktu saham META Platforms, Inc
 
-
+Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham META Platforms, Inc. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
 
 ### Exploratory Data Analysis - Outliers
 Berikut visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
