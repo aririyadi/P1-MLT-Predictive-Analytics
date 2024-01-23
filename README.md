@@ -141,7 +141,7 @@ meta.hist(bins=50, figsize=(20,15))
 plt.show()
 ```
 
-![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/74593a73-e795-4795-864a-246333055294)
+![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f96839e4-d4bf-4fb8-b448-d865e5fb2ee5)
 
 **Gambar 6**. Histogram Fitur Numerik
 
