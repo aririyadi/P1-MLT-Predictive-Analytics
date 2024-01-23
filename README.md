@@ -133,6 +133,10 @@ Berikut Penjelasan Kodenya:
 - meta.shape: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus outlier.
 
 ### Exploratory Data Analysis - Univariate Analysis
+```sh
+meta.hist(bins=50, figsize=(20,15))
+plt.show()
+```
 
 ![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/74593a73-e795-4795-864a-246333055294)
 
