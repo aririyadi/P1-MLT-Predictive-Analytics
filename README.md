@@ -147,10 +147,8 @@ plt.show()
 
 Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yang merupakan fitur target (label) pada data kita. Dari histogram "Adj Close", kita bisa memperoleh beberapa informasi, antara lain:
 
-- Peningkatan harga saham META sebanding dengan penurunan jumlah sampel. Hal ini dapat kita lihat jelas dari histogram "Adj Close" yang grafiknya mengalami penurunan seiring dengan semakin banyaknya jumlah sampel (sumbu x).
 - Rentang harga saham META cukup tinggi yaitu dari skala ratusan dolar Amerika hingga sekitar $273000.
 - Setengah harga saham META bernilai di bawah $203000.
-- Distribusi harga saham META miring ke kanan (right-skewed). Hal ini akan berimplikasi pada model.
 
 ### Exploratory Data Analysis - Multivariate Analysis
 
