@@ -220,7 +220,7 @@ scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
-Jelaskan lebih lanjut mengenai pemilihan parameter pada Min-Max Scaling dan bagaimana hal tersebut dapat memengaruhi performa model.
+Dalam _Min-Max Scaling_, terdapat satu parameter utama yang dapat diatur, yaitu **feature_range**. Secara default, **feature_range** diatur menjadi (0, 1), yang berarti nilai-nilai dalam dataset akan dinormalisasi ke dalam rentang antara 0 dan 1. Namun, pemilihan rentang fitur ini dapat disesuaikan sesuai kebutuhan proyek. Misalnya, dengan mengatur **feature_range** menjadi rentang yang lebih besar seperti (-1, 1), kita dapat memperluas rentang normalisasi. Pemilihan parameter ini dapat memengaruhi performa model terutama dalam konteks perbandingan skala antar fitur. Rentang yang terlalu kecil mungkin membuat model kurang responsif terhadap variasi nilai, sementara rentang yang terlalu besar dapat mengakibatkan kehilangan informasi dan sensitivitas terhadap perubahan. Oleh karena itu, pemilihan **feature_range** harus disesuaikan dengan karakteristik data dan jenis model yang digunakan. Dengan menyesuaikan parameter ini, normalisasi dapat dilakukan dengan optimal, membantu model untuk konvergen dengan baik dan meningkatkan kinerja terutama pada algoritma-algoritma yang sensitif terhadap skala.
 
 
 ## Modeling
