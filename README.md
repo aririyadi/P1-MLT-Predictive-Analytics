@@ -83,6 +83,9 @@ Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom,
 - _Adj Close_ : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
 - _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
+### Exploratory Data Analysis - Tren Waktu
+
+
 ### Exploratory Data Analysis - Outliers
 Berikut visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
 
