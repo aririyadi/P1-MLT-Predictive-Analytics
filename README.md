@@ -211,7 +211,7 @@ print(f'Total Test Dataset: {len(X_test)}')
 - Total Test Dataset: 285
 
 ### Data Normalization
-Min-Max Scaling (MinMaxScaler) adalah salah satu teknik normalisasi yang digunakan untuk mengubah nilai-nilai dalam dataset ke dalam rentang tertentu, umumnya antara 0 dan 1. Pemilihan parameter pada Min-Max Scaling dapat mempengaruhi performa model dan penyesuaian normalisasi terhadap data.
+_Min-Max Scaling_ (_MinMaxScaler_) adalah salah satu teknik normalisasi yang digunakan untuk mengubah nilai-nilai dalam dataset ke dalam rentang tertentu, umumnya antara 0 dan 1. Pemilihan parameter pada _Min-Max Scaling_ dapat mempengaruhi performa model dan penyesuaian normalisasi terhadap data.
 
 **Kode :**
 
@@ -220,25 +220,26 @@ scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
-Dalam konteks proyek analisis prediktif pada data historis harga saham META Platforms, penggunaan Min-Max Scaling dengan penyesuaian parameter '_feature_range_' memiliki dampak penting pada normalisasi data. Dalam dataset harga saham, variabel seperti harga pembukaan (_Open_), harga tertinggi (_High_), harga terendah (_Low_), dan harga penutupan yang disesuaikan (_Adj Close_) mungkin memiliki rentang nilai yang cukup besar. Dengan menggunakan _Min-Max Scaling_, kita dapat mengonversi nilai-nilai ini ke dalam rentang tertentu, memastikan bahwa model dapat memahami dan memproses perbedaan skala antar fitur.
+Dalam konteks proyek analisis prediktif pada data historis harga saham META Platforms, penggunaan _Min-Max Scaling_ dengan penyesuaian parameter '_feature_range_' memiliki dampak penting pada normalisasi data. Dalam dataset harga saham, variabel seperti harga pembukaan (_Open_), harga tertinggi (_High_), harga terendah (_Low_), dan harga penutupan yang disesuaikan (_Adj Close_) mungkin memiliki rentang nilai yang cukup besar. Dengan menggunakan _Min-Max Scaling_, kita dapat mengonversi nilai-nilai ini ke dalam rentang tertentu, memastikan bahwa model dapat memahami dan memproses perbedaan skala antar fitur.
 
 Misalnya, pada proyek ini, harga saham yang bervariasi dari ratusan dolar hingga puluhan ribu dolar. Dengan mengatur '_feature_range_' menjadi rentang yang lebih besar seperti (-1, 1), kita dapat mempertahankan perbedaan relatif antara nilai-nilai tersebut. Pemilihan rentang yang sesuai dapat menjadi kunci untuk mencegah kehilangan informasi yang signifikan dan memastikan model lebih responsif terhadap variasi nilai.
 
 Dengan demikian, penggunaan _Min-Max Scaling_ dengan penyesuaian parameter '_feature_range_' menjadi strategi normalisasi yang relevan dan efektif dalam konteks proyek analisis harga saham META Platforms.
 
 ## Modeling
-Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyelesaikan permasalahan, yaitu Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN).
+Dalam pemodelan ini, tiga algoritma machine learning yang digunakan untuk menyelesaikan permasalahan, yaitu _Support Vector Regression (SVR)_, _Gradient Boosting_, dan _K-Nearest Neighbors (KNN)_.
 
-### Support Vector Regression (SVR)
+### _Support Vector Regression (SVR)_
 #### Kode:
 ```sh
 svr = SVR(C=10, gamma=0.3, kernel='rbf')
 svr.fit(X_train, y_train)
 ```
 #### Parameter yang Digunakan:
--	C=10 : Parameter penalti yang mengontrol toleransi terhadap kesalahan.
--	gamma=0.3 : Parameter kernel untuk 'rbf' yang mengontrol bentuk dari fungsi basis Gaussian.
--	kernel='rbf ': Jenis kernel yang digunakan.
+-	**C=10** : Parameter penalti yang mengontrol toleransi terhadap kesalahan.
+-	**gamma=0.3** : Parameter kernel untuk '_rbf_' yang mengontrol bentuk dari fungsi basis Gaussian.
+-	**kernel='rbf** ': Jenis kernel yang digunakan.
+  
 #### Kelebihan dan Kekurangan:
 -	Kelebihan: Mampu menangani data non-linier dan bekerja baik dengan data berdimensi tinggi.
 -	Kekurangan: Sensitif terhadap pemilihan parameter dan dapat memerlukan waktu komputasi yang cukup besar.
