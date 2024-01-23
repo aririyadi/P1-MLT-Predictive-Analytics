@@ -114,7 +114,17 @@ plt.show()
 
 **Gambar 4**. Visualisasi Mendeteksi Outlier
 
-Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara 25% dan 75%.
+Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR. Berikut kode untuk menghapusnya:
+
+```sh
+Q1 = meta.quantile(0.25)
+Q3 = meta.quantile(0.75)
+IQR=Q3-Q1
+meta=meta[~((meta<(Q1-1.5*IQR))|(meta>(Q3+1.5*IQR))).any(axis=1)]
+meta.shape
+```
+
+
 
 ### Exploratory Data Analysis - Univariate Analysis
 
