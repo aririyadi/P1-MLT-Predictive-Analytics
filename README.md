@@ -51,6 +51,7 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 **Gambar 2**. Indentifikasi _Missing Value_
 
 - Deskripsi statistik data dengan fitur ```describe()```.
+
 **Tabel 1**. Informasi statistik pada masing-masing kolom
 |           | Open      | High      | Low       | Close     | Adj Close | Volume        |
 |-----------|-----------|-----------|-----------|-----------|-----------|---------------|
