@@ -1,44 +1,44 @@
 # Laporan Proyek Machine Learning – _Ari Riyadi_
 ## Domain Proyek
-Dataset META Platforms, Inc. dipilih untuk proyek ini karena keberagaman data yang mencakup teks, gambar, dan metadata, serta ketersediaan data yang luas. Relevansi platform ini dengan tujuan analisis prediktif terletak pada jumlah pengguna yang besar dan potensi untuk mendukung proyek seperti analisis sentimen, prediksi perilaku pengguna, dan pengembangan model kecerdasan buatan. Karakteristik dataset yang mendukung analisis prediktif melibatkan ukuran sampel besar, ketersediaan label, dan variabel yang relevan, serta penelitian terhadap periode waktu yang memadai. Dengan demikian, pemilihan dataset ini didasarkan pada potensi untuk memberikan wawasan mendalam dan mendukung proyek analisis prediktif yang diinginkan.
+Dataset _META Platforms, Inc_. dipilih untuk proyek ini karena keberagaman data yang mencakup teks, gambar, dan metadata, serta ketersediaan data yang luas. Relevansi platform ini dengan tujuan analisis prediktif terletak pada jumlah pengguna yang besar dan potensi untuk mendukung proyek seperti analisis sentimen, prediksi perilaku pengguna, dan pengembangan model kecerdasan buatan. Karakteristik dataset yang mendukung analisis prediktif melibatkan ukuran sampel besar, ketersediaan label, dan variabel yang relevan, serta penelitian terhadap periode waktu yang memadai. Dengan demikian, pemilihan dataset ini didasarkan pada potensi untuk memberikan wawasan mendalam dan mendukung proyek analisis prediktif yang diinginkan.
 
 ### Latar Belakang
-Dalam era globalisasi dan pasar keuangan yang dinamis, pengambilan keputusan yang tepat dalam investasi menjadi semakin penting. Salah satu alat yang telah menjadi fokus perhatian adalah analisis prediktif, yang memungkinkan para investor untuk membuat keputusan yang lebih informasional dan cerdas. Dalam konteks ini, proyek ini akan berfokus pada penerapan analisis prediktif terhadap data historis harga dan data terkait saham META Platforms, Inc.
+Dalam era globalisasi dan pasar keuangan yang dinamis, pengambilan keputusan yang tepat dalam investasi menjadi semakin penting. Salah satu alat yang telah menjadi fokus perhatian adalah analisis prediktif, yang memungkinkan para investor untuk membuat keputusan yang lebih informasional dan cerdas. Dalam konteks ini, proyek ini akan berfokus pada penerapan analisis prediktif terhadap data historis harga dan data terkait saham _META Platforms, Inc_.
 
-Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga saham META Platforms, Inc., memberikan nilai tambah dalam pengambilan keputusan investasi, dan meningkatkan pemahaman tentang bagaimana data historis dapat digunakan untuk meramalkan perilaku pasar keuangan.
+Proyek ini bertujuan untuk menggali potensi analisis prediktif terhadap harga saham _META Platforms_, memberikan nilai tambah dalam pengambilan keputusan investasi, dan meningkatkan pemahaman tentang bagaimana data historis dapat digunakan untuk meramalkan perilaku pasar keuangan.
 
 ## Business Understanding
 ### Problem Statements
-- Bagaimana menganalisis secara efektif data historis harga saham META Platforms, Inc. Agar mendapatkan wawasan yang mendalam terkait dengan pergerakan dan faktor-faktor yang mempengaruhi harga saham tersebut?
-- Bagaimana memproses data historis harga saham META Platforms, Inc. agar dapat digunakan secara optimal oleh model analisis prediktif?
-- Bagaimana membangun model analisis prediktif yang dapat memprediksi pergerakan harga saham META Platforms, Inc. dengan tingkat akurasi yang tinggi?
+- Bagaimana menganalisis secara efektif data historis harga saham _META Platforms, In_c. Agar mendapatkan wawasan yang mendalam terkait dengan pergerakan dan faktor-faktor yang mempengaruhi harga saham tersebut?
+- Bagaimana memproses data historis harga saham _META Platforms, Inc_. agar dapat digunakan secara optimal oleh model analisis prediktif?
+- Bagaimana membangun model analisis prediktif yang dapat memprediksi pergerakan harga saham _META Platforms, Inc_. dengan tingkat akurasi yang tinggi?
 
 ### Goals
-- Mengembangkan analisis data historis harga saham META Platforms, Inc. yang memberikan wawasan mendalam terkait dengan pola dan tren pergerakan harga saham tersebut.
-- Memproses data historis dengan baik, termasuk menangani outlier, mengelola missing values, dan melakukan feature engineering yang relevan agar dapat menjadi input yang optimal untuk model prediktif.
-- Membangun model analisis prediktif yang memiliki tingkat akurasi yang tinggi dalam meramalkan pergerakan harga saham META Platforms, Inc. Metrik evaluasi dapat mencakup Mean Squared Error (MSE) atau akurasi prediksi yang dapat diukur.
+- Mengembangkan analisis data historis harga saham _META Platforms, Inc_. yang memberikan wawasan mendalam terkait dengan pola dan tren pergerakan harga saham tersebut.
+- Memproses data historis dengan baik, termasuk menangani _outlier_, mengelola _missing values_, dan melakukan feature engineering yang relevan agar dapat menjadi input yang optimal untuk model prediktif.
+- Membangun model analisis prediktif yang memiliki tingkat akurasi yang tinggi dalam meramalkan pergerakan harga saham _META Platforms, Inc_. Metrik evaluasi dapat mencakup _Mean Squared Error (MSE)_ atau akurasi prediksi yang dapat diukur.
 
 ### Solution statements
 #### 1. Menerapkan Teknik Analisis Prediktif dengan Machine Learning Algorithms
-- Menggunakan algoritma seperti Support Vector Machine (untuk Support Vector Regression), K-Nearest Neighbors, dan Boosting Algorithm (untuk Gradient Boosting Regression) untuk melakukan analisis prediktif pada data historis harga saham META Platforms, Inc.
+- Menggunakan algoritma seperti _Support Vector Machine (untuk Support Vector Regression)_, _K-Nearest Neighbors_, dan _Boosting Algorithm (untuk Gradient Boosting Regression)_ untuk melakukan analisis prediktif pada data historis harga saham _META Platforms, Inc_.
 #### 2. Optimasi Data Preprocessing untuk Kualitas Dataset yang Lebih Baik
 - Melakukan preprocessing data dengan cermat, termasuk identifikasi dan penanganan outlier secara efisien untuk mencegah pengaruh yang tidak diinginkan pada model.
 - Menyusun strategi yang efektif dalam mengelola missing values, baik dengan metode imputasi atau penghapusan data yang tidak lengkap.
 - Mengimplementasikan teknik feature engineering dengan menguji dan memilih variabel yang paling relevan untuk meningkatkan kualitas input data bagi model prediktif.
-#### 3. Penyetelan Hyperparameter Menggunakan Teknik Grid Search
-- Melakukan penyetelan hyperparameter agar model dapat beroperasi dengan performa terbaik, menggunakan teknik Grid Search.
+#### 3. Penyetelan Hyperparameter Menggunakan Teknik _Grid Search_
+- Melakukan penyetelan hyperparameter agar model dapat beroperasi dengan performa terbaik, menggunakan teknik _Grid Search_.
 
-Kaitan antara ketiga elemen tersebut terletak pada fakta bahwa Problem Statements mengidentifikasi tantangan yang perlu diatasi, Goals menetapkan tujuan yang harus dicapai, dan Solution Statements memberikan solusi konkret untuk mencapai tujuan tersebut. Seluruh rangkaian ini membentuk kerangka kerja yang koheren untuk proyek analisis prediktif pada data historis harga saham META Platforms, Inc.
+Kaitan antara ketiga elemen tersebut terletak pada fakta bahwa Problem Statements mengidentifikasi tantangan yang perlu diatasi, Goals menetapkan tujuan yang harus dicapai, dan Solution Statements memberikan solusi konkret untuk mencapai tujuan tersebut. Seluruh rangkaian ini membentuk kerangka kerja yang koheren untuk proyek analisis prediktif pada data historis harga saham _META Platforms, Inc_.
 
 ## Data Understanding
-Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
+Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham _META Platforms, Inc_.
 Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](https://www.kaggle.com/datasets/fhabibimoghaddam/meta-stock-historical-prices-and-data2).
 
 
 ### Berikut informasi pada dataset:
-- Dataset memiliki format CSV (Comma-Seperated Values).
+- Dataset memiliki format CSV (_Comma-Seperated Values_).
 - Dataset memiliki 1509 rows & 7 columns seperti (_Date, Open, High, Low, Close, Adj Close, Volume_).
-- Terdapat 1 kolom dengan tipe data object, 5 kolom numerik dengan tipe data float64 dan 1 kolom numerik dengan tipe data int64. Berikut potongan kode dan outputnya:
+- Terdapat 1 kolom dengan tipe data _object_, 5 kolom numerik dengan tipe data _float64_ dan 1 kolom numerik dengan tipe data _int64_. Berikut potongan kode dan outputnya:
 ```sh
 meta = pd.read_csv('META.csv')
 meta.info()
@@ -65,14 +65,14 @@ meta.describe()
 
 Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom, antara lain:
 
-- Count  adalah jumlah sampel pada data.
-- Mean adalah nilai rata-rata.
-- Std adalah standar deviasi.
-- Min yaitu nilai minimum setiap kolom. 
-- 25% adalah kuartil pertama. Kuartil adalah nilai yang menandai batas interval dalam empat bagian sebaran yang sama. 
-- 50% adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
-- 75% adalah kuartil ketiga.
-- Max adalah nilai maksimum.
+- **Count**  adalah jumlah sampel pada data.
+- **Mean** adalah nilai rata-rata.
+- **Std** adalah standar deviasi.
+- **Min** yaitu nilai minimum setiap kolom. 
+- **25%** adalah kuartil pertama. Kuartil adalah nilai yang menandai batas interval dalam empat bagian sebaran yang sama. 
+- **50%** adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
+- **75%** adalah kuartil ketiga.
+- **Max** adalah nilai maksimum.
 
 ### Variabel-variabel pada Dataset: 
 - _Date_ : Tanggal transaksi saham. 
@@ -84,7 +84,7 @@ Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom,
 - _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
 ### Exploratory Data Analysis - Tren Waktu Saham META Platforms
-Berikut adalah kode dan visualisasi yang menggambarkan tren waktu terhadap harga saham META Platforms:
+Berikut adalah kode dan visualisasi yang menggambarkan tren waktu terhadap harga saham _META Platforms_:
 
 ```sh
 meta['Date'] = pd.to_datetime(meta['Date'])
@@ -98,12 +98,12 @@ plt.show()
 ```
 ![4](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/ea6b1283-1087-454d-907d-fb0e8f142be3)
 
-**Gambar 4**. Grafik Tren Waktu saham META Platforms, Inc
+**Gambar 4**. Grafik Tren Waktu saham _META Platforms, Inc_
 
-Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham META Platforms, Inc. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
+Grafik Tren Waktu ini dapat menjadi dasar untuk analisis lebih lanjut terhadap performa saham _META Platforms, Inc_. dan membantu dalam pengambilan keputusan investasi atau strategi perdagangan. Analisis lebih lanjut, baik dalam bentuk statistik atau model prediktif, mungkin diperlukan untuk memperdalam pemahaman tentang pergerakan harga saham ini.
 
-### Exploratory Data Analysis - Outliers
-Berikut potongan kode dan visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
+### Exploratory Data Analysis - _Outliers_
+Berikut potongan kode dan visualisasi data META dengan boxplot untuk mendeteksi _outliers_ pada beberapa fitur numerik:
 
 ```sh
 plt.subplots(figsize=(10,7))
@@ -113,9 +113,9 @@ plt.show()
 ![5](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/604f16cb-ad9b-47c6-9fd6-8081abbff042)
 
 
-**Gambar 5**. Visualisasi Mendeteksi Outlier
+**Gambar 5**. Visualisasi Mendeteksi _Outlier_
 
-Dari visualisasi data, hanya fitur Volume saja yang memiliki outlier. Untuk menangani outlier kita akan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR. Berikut kode untuk menghapusnya:
+Dari visualisasi data, hanya fitur Volume saja yang memiliki _outlier_. Untuk menangani _outlier_ kita akan menggunakan _IQR Method_ yaitu dengan menghapus data yang berada diluar _IQR_. Berikut kode untuk menghapusnya:
 
 ```sh
 numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns
@@ -127,13 +127,13 @@ print(meta.shape)
 ```
 Berikut Penjelasan Kodenya:
 
-- numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns: Memilih hanya kolom-kolom numerik (float64 dan int64) dari dataset. Ini termasuk kolom seperti 'Open', 'High', 'Low', 'Close', 'Adj Close', dan 'Volume'.
-- Q1 = meta[numeric_columns].quantile(0.25): Menghitung nilai kuartil pertama (25th percentile) untuk setiap kolom numerik.
-- Q3 = meta[numeric_columns].quantile(0.75): Menghitung nilai kuartil ketiga (75th percentile) untuk setiap kolom numerik.
-- IQR = Q3 - Q1: Menghitung rentang interkuartil (IQR) untuk setiap kolom numerik.
-- ((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))): Menandai data sebagai outlier jika berada di luar rentang (Q1 - 1.5 * IQR) hingga (Q3 + 1.5 * IQR).
-- meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]: Menghapus baris yang mengandung setidaknya satu outlier dalam setiap kolom numerik.
-- print(meta.shape): Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus outlier.
+- ```numeric_columns = meta.select_dtypes(include=['float64', 'int64']).columns```: Memilih hanya kolom-kolom numerik (_float64_ dan _int64_) dari dataset. Ini termasuk kolom seperti _'Open', 'High', 'Low', 'Close', 'Adj Close', dan 'Volume'_.
+- ```Q1 = meta[numeric_columns].quantile(0.25)```: Menghitung nilai kuartil pertama (25th percentile) untuk setiap kolom numerik.
+- ```Q3 = meta[numeric_columns].quantile(0.75)```: Menghitung nilai kuartil ketiga (75th percentile) untuk setiap kolom numerik.
+- ```IQR = Q3 - Q1```: Menghitung rentang interkuartil (IQR) untuk setiap kolom numerik.
+- ```((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR)))```: Menandai data sebagai _outlier_ jika berada di luar rentang (Q1 - 1.5 * IQR) hingga (Q3 + 1.5 * IQR).
+- ```meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]```: Menghapus baris yang mengandung setidaknya satu _outlier_ dalam setiap kolom numerik.
+- ```print(meta.shape)```: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus _outlier_.
 
 ### Exploratory Data Analysis - Univariate Analysis
 ```sh
