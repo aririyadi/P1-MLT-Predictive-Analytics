@@ -339,16 +339,14 @@ models.head()
 Tabel 2. memperlihatkan hasil evaluasi performa tiga model berbeda (_SVR, KNN, dan Gradient Boosting_) berdasarkan _Mean Squared Error (MSE)_. _MSE_ diukur pada data pelatihan (_Train MSE_) dan data pengujian (_Test MSE_). Semakin kecil nilai _MSE_, semakin baik kinerja model dalam memprediksi nilai target.
 
 ### Visualization of Model Comparison
-Berikut potongan kode untuk membuat chart dan visualisasi perbandingan model:
 
+**Kode:**
 ```sh
 fig, ax = plt.subplots()
 models.sort_values(by='test_mse', ascending=False).plot(kind='barh', ax=ax, zorder=3)
 ax.grid(zorder=0)
 ```
 ![9](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/21e2bcf4-3e50-4efb-81de-70c30a0ce79d)
-
-
 
 ### Prediction
 Melalui langkah-langkah ini, kita dapat melihat bagaimana setiap model yang telah dilatih merespons terhadap subset data uji yang telah dipilih. Hal ini membantu dalam mengevaluasi kemampuan prediktif model pada situasi yang belum pernah dilihat sebelumnya dan memberikan gambaran tentang sejauh mana model dapat menghasilkan prediksi yang mendekati nilai sebenarnya. Berikut potongan kode dan hasil outputnya:
