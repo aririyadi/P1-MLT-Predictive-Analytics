@@ -45,7 +45,7 @@ meta.info()
 ```
 ![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/747fc8ae-9c1e-498d-aa36-0aac1b386a22)
 
-Gambar 1. Informasi Mengenai Dataset
+**Gambar 1**. Informasi Mengenai Dataset
 
 - Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
 ```sh
@@ -53,7 +53,7 @@ meta.isnull().sum()
 ```
 ![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/2218b7ac-a842-478e-afdf-8522ff40baa5)
 
-Gambar 2. Indentifikasi _Missing Value_
+**Gambar 2**. Indentifikasi _Missing Value_
 
 ### Variabel-variabel pada Dataset: 
 - _Date_ : Tanggal transaksi saham. 
