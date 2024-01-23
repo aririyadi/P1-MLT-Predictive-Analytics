@@ -53,13 +53,13 @@ meta.isnull().sum()
 ![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/2218b7ac-a842-478e-afdf-8522ff40baa5)
 
 ### Variabel-variabel pada Dataset: 
-- Date : Tanggal transaksi saham. 
-- Open : harga saham pada saat pembukaan pasar pada tanggal tertentu.
-- High : harga saham tertinggi yang dicapai pada tanggal tertentu.
-- Low : harga saham terendah yang dicapai pada tanggal tertentu.
-- Close : harga saham pada saat penutupan pasar pada tanggal tertentu.
-- Adj Close (Adjusted Close) : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
-- Volume : jumlah saham yang diperdagangkan pada tanggal tertentu.
+- _Date_ : Tanggal transaksi saham. 
+- _Open_ : harga saham pada saat pembukaan pasar pada tanggal tertentu.
+- _High_ : harga saham tertinggi yang dicapai pada tanggal tertentu.
+- _Low_ : harga saham terendah yang dicapai pada tanggal tertentu.
+- _Close_ : harga saham pada saat penutupan pasar pada tanggal tertentu.
+- _Adj Close_ : harga penutup yang telah disesuaikan dengan pembagian saham, dividen, atau perubahan struktur modal lainnya yang dapat mempengaruhi harga saham.
+- _Volume_ : jumlah saham yang diperdagangkan pada tanggal tertentu.
 
 ### Exploratory Data Analysis - Outliers
 Berikut visualisasi data META dengan boxplot untuk mendeteksi outliers pada beberapa fitur numerik:
