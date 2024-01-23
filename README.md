@@ -135,7 +135,7 @@ Berikut Penjelasan Kodenya:
 - ```meta = meta[~((meta[numeric_columns] < (Q1 - 1.5 * IQR)) | (meta[numeric_columns] > (Q3 + 1.5 * IQR))).any(axis=1)]```: Menghapus baris yang mengandung setidaknya satu _outlier_ dalam setiap kolom numerik.
 - ```print(meta.shape)```: Menampilkan bentuk (jumlah baris dan kolom) dari dataset setelah menghapus _outlier_.
 
-### Exploratory Data Analysis - _Univariate Analysis_
+### _Exploratory Data Analysis - Univariate Analysis_
 ```sh
 meta.hist(bins=50, figsize=(20,15))
 plt.show()
@@ -150,7 +150,7 @@ Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yan
 - Rentang harga saham META cukup tinggi yaitu dari skala ratusan dolar Amerika hingga sekitar $273000.
 - Setengah harga saham META bernilai di bawah $203000.
 
-### Exploratory Data Analysis - _Multivariate Analysis_
+### _Exploratory Data Analysis - Multivariate Analysis_
 ```sh
 sns.pairplot(meta, diag_kind = 'kde')
 ```
@@ -177,13 +177,13 @@ Terlihat pada matriks korelasi di atas dapat disimpulkan bahwa semua variabel me
 ## Data Preparation
 
 ### Menghapus Fitur Yang Tidak Diperlukan
-Penghapusan fitur-fitur (Date, Volume dan Close) bertujuan untuk menyederhanakan dataset dan fokus pada atribut yang dianggap lebih relevan atau akurat dalam konteks analisis atau pembuatan model yang dilakukan. Berikut potongan kode dan hasil outputnya:
+Penghapusan fitur-fitur (_Date, Volume dan Close_) bertujuan untuk menyederhanakan dataset dan fokus pada atribut yang dianggap lebih relevan atau akurat dalam konteks analisis atau pembuatan model yang dilakukan. Berikut potongan kode dan hasil outputnya dalam bentuk tabel:
 
 ```sh
 meta = meta.drop(['Date', 'Volume', 'Close'], axis=1)
 meta.head()
 ```
-
+**Tabel 1**. Data Harga Saham META setelah Penghapusan Fitur
 |   Open      |    High     |    Low      |  Adj Close  |
 |-------------|-------------|-------------|-------------|
 | 181.880005  | 184.779999  | 181.330002  | 184.669998  |
@@ -191,6 +191,8 @@ meta.head()
 | 185.589996  | 186.899994  | 184.929993  | 186.850006  |
 | 187.199997  | 188.899994  | 186.330002  | 188.279999  |
 | 188.699997  | 188.800003  | 187.100006  | 187.869995  |
+
+Pada Tabel 1, dapat dilihat bahwa fitur-fitur Date, Volume, dan Close telah dihapus dari dataset, meninggalkan hanya fitur-fitur Open, High, Low, dan Adj Close. Pembersihan ini bertujuan untuk menyederhanakan dataset dan memfokuskan perhatian pada atribut yang dianggap lebih relevan.
 
 ### Melakukan Pembagian Dataset
 Setelah menghapus fitur yang tidak diperlukan, langkah selanjutnya adalah membagi dataset menjadi dua bagian: data pelatihan (80%) untuk melatih model dan data pengujian (20%) untuk menguji kinerja model pada data baru. Proporsi 80% untuk data pelatihan dipilih untuk memastikan model mendapatkan sejumlah besar data untuk belajar, sedangkan 20% sisanya digunakan untuk pengujian, memungkinkan evaluasi objektif terhadap kemampuan prediktif model. Berikut potongan kode dan hasil outputnya:
