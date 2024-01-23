@@ -38,32 +38,25 @@ Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](http
 ### Berikut informasi pada dataset:
 - Dataset memiliki format CSV (_Comma-Seperated Values_).
 - Dataset memiliki 1509 rows & 7 columns seperti (_Date, Open, High, Low, Close, Adj Close, Volume_).
-- Terdapat 1 kolom dengan tipe data _object_, 5 kolom numerik dengan tipe data _float64_ dan 1 kolom numerik dengan tipe data _int64_. Berikut potongan kode dan outputnya:
-```sh
-meta = pd.read_csv('META.csv')
-meta.info()
-```
+- Terdapat 1 kolom dengan tipe data _object_, 5 kolom numerik dengan tipe data _float64_ dan 1 kolom numerik dengan tipe data _int64_.
+
 ![1](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/747fc8ae-9c1e-498d-aa36-0aac1b386a22)
 
 **Gambar 1**. Informasi Mengenai Dataset
 
 - Tidak ada missing value dalam dataset. Berikut potongan kode untuk mengidentifikasinya:
-```sh
-meta.isnull().sum()
-```
+
 ![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/2218b7ac-a842-478e-afdf-8522ff40baa5)
 
 **Gambar 2**. Indentifikasi _Missing Value_
 
 - Deskripsi statistik data dengan fitur ```describe()```.
-```sh
-meta.describe()
-```
+
 ![3](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/bc96475d-4429-4478-82a7-6671d10a5e25)
 
 **Gambar 3**. Informasi statistik pada masing-masing kolom
 
-Fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom, antara lain:
+Menggunakan fungsi ```describe()``` memberikan informasi statistik pada masing-masing kolom, antara lain:
 
 - **Count**  adalah jumlah sampel pada data.
 - **Mean** adalah nilai rata-rata.
