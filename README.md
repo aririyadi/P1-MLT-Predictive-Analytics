@@ -314,24 +314,19 @@ $MSE = \frac{1}{N} \Sigma_{i=1}^{N} (y_i - \hat{y}_i)^2$
 
 Dengan demikian, _MSE_ mengukur rata-rata kuadrat dari selisih antara nilai sebenarnya dan nilai prediksi. Semakin kecil nilai _MSE_, semakin baik model dalam memprediksi nilai target. _MSE_ memberikan penalti yang lebih besar untuk kesalahan yang lebih besar, dan karenanya, model diharapkan dapat menghasilkan prediksi yang lebih akurat.
 
-### Hasil Proyek Berdasarkan Metrik Evaluasi:
--	Model dievaluasi menggunakan _MSE_ pada data pengujian.
--	Semakin kecil nilai _MSE_, semakin baik kinerja model dalam menghasilkan prediksi yang akurat.
--	Model dengan _MSE_ terendah dianggap sebagai solusi terbaik untuk menyelesaikan permasalahan regresi ini.
+### Analisis _Mean Squared Error (MSE)_:
+Mean Squared Error (MSE) digunakan sebagai metrik evaluasi untuk mengukur seberapa baik model regresi dapat memprediksi nilai target.
 
-Dengan menggunakan MSE sebagai metrik evaluasi, kita dapat mengukur seberapa baik model dapat memprediksi nilai harga saham atau variabel numerik lainnya dalam dataset. Semakin kecil nilai MSE, semakin akurat prediksi model, dan sebaliknya. Berikut potongan kode dan hasil outputnya:
-
+**Kode:**
 ```sh
 model_dict = {
     'SVR': svr,
     'GradientBoosting': gradient_boost,
     'KNN': knn,
 }
-
 for name, model in model_dict.items():
   models.loc[name, 'train_mse'] = mean_squared_error(y_train, model.predict(X_train))
   models.loc[name, 'test_mse'] = mean_squared_error(y_test, model.predict(X_test))
-
 models.head()
 ```
 **Tabel 2**. Evaluasi Model berdasarkan _Mean Squared Error (MSE)_
@@ -343,8 +338,6 @@ models.head()
 
 Tabel 2. memperlihatkan hasil evaluasi performa tiga model berbeda (_SVR, KNN, dan Gradient Boosting_) berdasarkan _Mean Squared Error (MSE)_. _MSE_ diukur pada data pelatihan (_Train MSE_) dan data pengujian (_Test MSE_). Semakin kecil nilai _MSE_, semakin baik kinerja model dalam memprediksi nilai target.
 
-
-
 ### Visualization of Model Comparison
 Berikut potongan kode untuk membuat chart dan visualisasi perbandingan model:
 
@@ -353,8 +346,8 @@ fig, ax = plt.subplots()
 models.sort_values(by='test_mse', ascending=False).plot(kind='barh', ax=ax, zorder=3)
 ax.grid(zorder=0)
 ```
+![9](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/21e2bcf4-3e50-4efb-81de-70c30a0ce79d)
 
-![Plot](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/blob/3e9c692e82b71be8e2b02bdf7438a51aa9dcd709/Gambar/7.png)
 
 
 ### Prediction
