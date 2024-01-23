@@ -143,9 +143,14 @@ plt.show()
 
 ![6](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/f96839e4-d4bf-4fb8-b448-d865e5fb2ee5)
 
-**Gambar 6**. Histogram Fitur Numerik
+**Gambar 6**. Histogram Fitur Numerik - Univariate Analysis
 
-Mari amati histogram di atas, gambar histogram di atas memberikan visualisasi distribusi univariat dari suatu variabel pada dataset. Histogram tersebut menggambarkan distribusi frekuensi dari nilai-nilai pada variabel tertentu.
+Mari amati histogram di atas, khususnya histogram untuk variabel "Adj Close" yang merupakan fitur target (label) pada data kita. Dari histogram "Adj Close", kita bisa memperoleh beberapa informasi, antara lain:
+
+- Peningkatan harga saham META sebanding dengan penurunan jumlah sampel. Hal ini dapat kita lihat jelas dari histogram "Adj Close" yang grafiknya mengalami penurunan seiring dengan semakin banyaknya jumlah sampel (sumbu x).
+- Rentang harga saham META cukup tinggi yaitu dari skala ratusan dolar Amerika hingga sekitar $273000.
+- Setengah harga saham META bernilai di bawah $203000.
+- Distribusi harga saham META miring ke kanan (right-skewed). Hal ini akan berimplikasi pada model.
 
 ### Exploratory Data Analysis - Multivariate Analysis
 
