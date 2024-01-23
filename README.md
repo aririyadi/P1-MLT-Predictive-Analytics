@@ -377,18 +377,18 @@ pd.DataFrame(pred_dict)
 |--------------|--------------|---------------------------|--------------|
 | 177.970001   | 177.3        | 178.9                     | 178.4        |
 
-
 Tabel 3. menunjukkan perbandingan antara nilai sebenarnya (_y_true_) dengan hasil prediksi dari tiga model yang digunakan: _Support Vector Regression (SVR), Gradient Boosting, dan K-Nearest Neighbors (KNN)_. Dalam setiap kolom prediksi, terdapat nilai prediksi yang diperoleh dari masing-masing model.
 
-## Referensi
 
-[1]. Brown, S. J., Rozeff, M. S., & Ball, R. (1976). The Influence of Institutional Investors on Myopic R&D Investment Behavior. *Journal of Finance*, 31(5), 1653-1665.
+## Reference
 
-[2]. Chen, J., Fan, Y., & Li, Q. (2014). Online Daily Stock Trading with Regularized Linear Models. *Journal of Business & Economic Statistics*, 32(2), 267-287.
+[1].   Brown, S. J., Rozeff, M. S., & Ball, R. (1976). The Influence of Institutional Investors on Myopic R&D Investment Behavior. *Journal of Finance*, 31(5), 1653-1665.
 
-[3]. Siegel, E. (2013). *Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die*. Wiley.
+[2].   Chen, J., Fan, Y., & Li, Q. (2014). Online Daily Stock Trading with Regularized Linear Models. *Journal of Business & Economic Statistics*, 32(2), 267-287.
 
-[4]. Heaton, J., Polson, N. G., & Witte, J. H. (2017). Deep Learning for Finance: Deep Portfolios. *Applied Stochastic Models in Business and Industry*, 33(1), 3-12.
+[3].   Siegel, E. (2013). *Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die*. Wiley.
+
+[4].   Heaton, J., Polson, N. G., & Witte, J. H. (2017). Deep Learning for Finance: Deep Portfolios. *Applied Stochastic Models in Business and Industry*, 33(1), 3-12.
 
 
 
