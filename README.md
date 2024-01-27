@@ -1,5 +1,5 @@
 # Predictive Analytics - META Stock Historical Prices & Data
-**_Oleh_ : Ari Riyadi, S. Kom**
+**_By_ : _Ari Riyadi, S. Kom_**
 
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aririyadi/)
 [![Kaggle Badge](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/)
