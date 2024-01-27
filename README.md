@@ -1,9 +1,9 @@
 # Predictive Analytics - META Stock Historical Prices & Data
 
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
-[![GitHub Logo](https://img.shields.io/badge/GitHub-Profile-green?style=flat&logo=github)](https://github.com/aririyadi)
-[![Kaggle Logo](https://img.shields.io/badge/Kaggle-Profile-blue?style=flat&logo=kaggle)](https://www.kaggle.com/USERNAME)
-[![Colab Logo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-green?style=flat&logo=github)](https://github.com/aririyadi)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Profile-blue?style=flat&logo=kaggle)](https://www.kaggle.com/USERNAME)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 
 
 
