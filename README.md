@@ -1,4 +1,20 @@
 # Predictive Analytics - META Stock Historical Prices & Data
+
+<p align='center'>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />        
+  </a>
+  <a href="https://github.com/nurmuhimawann/">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />        
+  </a>
+  <a href="https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset">
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" />
+  </a
+   <a href="https://colab.research.google.com/">
+    <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" />
+  </a
+</p>
+
 **_Oleh_ : Ari Riyadi, S. Kom**
 
 ![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c6a4c92f-a715-4771-ac49-2819ec89f2d2)
