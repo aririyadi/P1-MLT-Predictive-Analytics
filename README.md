@@ -34,6 +34,7 @@ Kaitan antara ketiga elemen tersebut terletak pada fakta bahwa Problem Statement
 ## Data Understanding
 Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham META Platforms, Inc.
 Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](https://www.kaggle.com/datasets/fhabibimoghaddam/meta-stock-historical-prices-and-data2).
+![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c6a4c92f-a715-4771-ac49-2819ec89f2d2)
 
 
 ### Berikut informasi pada dataset:
