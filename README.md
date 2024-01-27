@@ -1,36 +1,9 @@
 # Predictive Analytics - META Stock Historical Prices & Data
 
 [![Python Badge](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/USERNAME)
-[![Kaggle Badge](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/USERNAME)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aririyadi/)
+[![Kaggle Badge](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/)
 [![Colab Badge](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=google-colab&logoColor=white)](https://colab.research.google.com/)
-
-
-[![GitHub Logo](https://img.shields.io/badge/GitHub-Repository-green?style=flat&logo=github)](https://github.com/)
-[![Kaggle Logo](https://img.shields.io/badge/Kaggle-Profile-blue?style=flat&logo=kaggle)](https://www.kaggle.com/)
-[![Colab Logo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.google/)
-
-
-
-
-
-
-
-
-<p align='center'>
-  <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />        
-  </a>
-  <a href="https://github.com/nurmuhimawann/">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />        
-  </a>
-  <a href="https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset">
-    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" />
-  </a
-   <a href="https://colab.research.google.com/">
-    <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" />
-  </a
-</p>
 
 **_Oleh_ : Ari Riyadi, S. Kom**
 
