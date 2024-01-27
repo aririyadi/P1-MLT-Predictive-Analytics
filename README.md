@@ -1,5 +1,8 @@
 # Predictive Analytics - META Stock Historical Prices & Data
 **_Oleh_ : Ari Riyadi, S. Kom**
+
+![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c6a4c92f-a715-4771-ac49-2819ec89f2d2)
+
 ## Domain Proyek
 Dataset META Platforms, Inc. dipilih untuk proyek ini karena keberagaman data yang mencakup teks, gambar, dan metadata, serta ketersediaan data yang luas. Relevansi platform ini dengan tujuan analisis prediktif terletak pada jumlah pengguna yang besar dan potensi untuk mendukung proyek seperti analisis sentimen, prediksi perilaku pengguna, dan pengembangan model kecerdasan buatan. Karakteristik dataset yang mendukung analisis prediktif melibatkan ukuran sampel besar, ketersediaan label, dan variabel yang relevan, serta penelitian terhadap periode waktu yang memadai. Dengan demikian, pemilihan dataset ini didasarkan pada potensi untuk memberikan wawasan mendalam dan mendukung proyek analisis prediktif yang diinginkan.
 
@@ -36,7 +39,7 @@ Dalam proyek ini, data yang digunakan berasal dari dataset historis harga saham 
 Dataset ini dapat diunduh di [Kaggle : META Stock Historical Prices & Data](https://www.kaggle.com/datasets/fhabibimoghaddam/meta-stock-historical-prices-and-data2).
 
 
-![2](https://github.com/aririyadi/P1-MLT-Predictive-Analytics/assets/147322531/c6a4c92f-a715-4771-ac49-2819ec89f2d2)
+
 
 
 ### Berikut informasi pada dataset:
